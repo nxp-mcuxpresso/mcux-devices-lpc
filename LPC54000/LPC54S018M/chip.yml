@@ -1,0 +1,113 @@
+---
+
+device.hardware_data:
+  section-type: "manifest_content"
+  belong_to: set.device.LPC54S018M
+  contents:
+    generated_from_chip_model: "yes"
+    devices:
+      - id: "LPC54S018J2M"
+        full_name: "LPC54S018J2M"
+        name: "LPC54S018M"
+        platform: "LPC"
+        series: "LPC54000"
+        family: "LPC540xx"
+        subfamily: "LPC54S018M"
+        frequency_mhz: 180
+        core:
+          - name: "Cortex-M4F"
+            type: "cm4f"
+            id: "core0"
+            description: "M4 core"
+            fpu: "SP_FPU"
+            mpu: true
+        memory:
+          memoryBlock:
+            - id: "PROGRAM_FLASH"
+              name: "PROGRAM_FLASH"
+              addr: 0x10000000
+              size: 0x200000
+              type: "Flash"
+              access: "RO"
+              default: true
+              startup: true
+            - id: "SRAMX"
+              name: "SRAMX"
+              addr: 0x0
+              size: 0x30000
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "SRAM_0_1_2_3"
+              name: "SRAM_0_1_2_3"
+              addr: 0x20000000
+              size: 0x28000
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "USB_RAM"
+              name: "USB_RAM"
+              addr: 0x40100000
+              size: 0x2000
+              type: "RAM"
+              access: "RW"
+              default: true
+        total_memory:
+          ram_size_kb: 352
+          flash_size_kb: 2048
+        part:
+          - name: "LPC54S018J2MET180"
+        modules:
+      - id: "LPC54S018J4M"
+        full_name: "LPC54S018J4M"
+        name: "LPC54S018M"
+        platform: "LPC"
+        series: "LPC54000"
+        family: "LPC540xx"
+        subfamily: "LPC54S018M"
+        frequency_mhz: 180
+        core:
+          - name: "Cortex-M4F"
+            type: "cm4f"
+            id: "core0"
+            description: "M4 core"
+            fpu: "SP_FPU"
+            mpu: true
+        memory:
+          memoryBlock:
+            - id: "PROGRAM_FLASH"
+              name: "PROGRAM_FLASH"
+              addr: 0x10000000
+              size: 0x400000
+              type: "Flash"
+              access: "RO"
+              default: true
+              startup: true
+            - id: "SRAMX"
+              name: "SRAMX"
+              addr: 0x0
+              size: 0x30000
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "SRAM_0_1_2_3"
+              name: "SRAM_0_1_2_3"
+              addr: 0x20000000
+              size: 0x28000
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "USB_RAM"
+              name: "USB_RAM"
+              addr: 0x40100000
+              size: 0x2000
+              type: "RAM"
+              access: "RW"
+              default: true
+        total_memory:
+          ram_size_kb: 352
+          flash_size_kb: 4096
+        part:
+          - name: "LPC54S018J4MET180"
+        modules:
+...

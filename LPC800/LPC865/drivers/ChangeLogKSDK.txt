@@ -1,0 +1,30 @@
+/*!
+@page driver_log Driver Change Log
+@section clock CLOCK
+  The current CLOCK driver version is 2.3.4.
+
+  - 2.3.4
+    - Improvements
+      - Added CLOCK_SetFLASHAccessCyclesForFreq.
+
+  - 2.3.3
+    - Improvements
+      - Added lost comments for some enumerations.
+
+@section power POWER
+  The current POWER driver version is 2.1.0.
+
+  - 2.1.0
+    - initial version.
+
+@section reset RESET
+  The current RESET driver version is 2.4.0.
+
+  - 2.4.0
+    - Improvements
+      - Add RESET_ReleasePeripheralReset API.
+
+  - 2.0.0
+    - initial version.
+
+*/

@@ -1,0 +1,57 @@
+---
+
+device.hardware_data:
+  section-type: "manifest_content"
+  belong_to: set.device.LPC845
+  contents:
+    generated_from_chip_model: "yes"
+    devices:
+      - id: "LPC845"
+        full_name: "LPC845"
+        name: "LPC845"
+        platform: "LPC"
+        series: "LPC84x"
+        family: "LPC84x"
+        subfamily: "LPC845"
+        frequency_mhz: 30
+        core:
+          - name: "Cortex-M0P"
+            type: "cm0p"
+            id: "core0"
+            description: "M0P core"
+            fpu: "NO_FPU"
+            mpu: false
+        memory:
+          memoryBlock:
+            - id: "PROGRAM_FLASH"
+              name: "PROGRAM_FLASH"
+              addr: 0x0
+              size: 0x10000
+              type: "Flash"
+              access: "RO"
+              default: true
+              startup: true
+            - id: "SRAM"
+              name: "SRAM"
+              addr: 0x10000000
+              size: 0x3fe0
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "IAP_SRAM"
+              name: "IAP_SRAM"
+              addr: 0x10003fe0
+              size: 0x20
+              type: "RAM"
+              access: "RW"
+              default: true
+        total_memory:
+          ram_size_kb: 16
+          flash_size_kb: 64
+        part:
+          - name: "LPC845M301JBD64"
+          - name: "LPC845M301JBD48"
+          - name: "LPC845M301JHI48"
+          - name: "LPC845M301JHI33"
+        modules:
+...

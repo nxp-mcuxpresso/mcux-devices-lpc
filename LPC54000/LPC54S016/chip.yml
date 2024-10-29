@@ -1,0 +1,56 @@
+---
+
+device.hardware_data:
+  section-type: "manifest_content"
+  belong_to: set.device.LPC54S016
+  contents:
+    generated_from_chip_model: "yes"
+    devices:
+      - id: "LPC54S016"
+        full_name: "LPC54S016"
+        name: "LPC54S016"
+        platform: "LPC"
+        series: "LPC54000"
+        family: "LPC540xx"
+        subfamily: "LPC54S016"
+        frequency_mhz: 180
+        core:
+          - name: "Cortex-M4F"
+            type: "cm4f"
+            id: "core0"
+            description: "M4 core"
+            fpu: "SP_FPU"
+            mpu: true
+        memory:
+          memoryBlock:
+            - id: "SRAMX"
+              name: "SRAMX"
+              addr: 0x0
+              size: 0x30000
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "SRAM_0_1_2_3"
+              name: "SRAM_0_1_2_3"
+              addr: 0x20000000
+              size: 0x28000
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "USB_RAM"
+              name: "USB_RAM"
+              addr: 0x40100000
+              size: 0x2000
+              type: "RAM"
+              access: "RW"
+              default: true
+        total_memory:
+          ram_size_kb: 352
+          flash_size_kb: 0
+        part:
+          - name: "LPC54S016JET180"
+          - name: "LPC54S016JBD208"
+          - name: "LPC54S016JBD100"
+          - name: "LPC54S016JET100"
+        modules:
+...

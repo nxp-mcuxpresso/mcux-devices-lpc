@@ -1,0 +1,96 @@
+---
+
+device.hardware_data:
+  section-type: "manifest_content"
+  belong_to: set.device.LPC55S26
+  contents:
+    generated_from_chip_model: "yes"
+    devices:
+      - id: "LPC55S26"
+        full_name: "LPC55S26"
+        name: "LPC55S26"
+        platform: "LPC"
+        series: "LPC5500"
+        family: "LPC552x_S2x"
+        subfamily: "LPC55S26"
+        frequency_mhz: 150
+        core:
+          - name: "Cortex-M33"
+            type: "cm33"
+            id: "cm33_core0"
+            description: ""
+            fpu: "SP_FPU"
+            dsp: true
+            mpu: true
+            sau: true
+        memory:
+          memoryBlock:
+            - id: "PROGRAM_FLASH"
+              name: "PROGRAM_FLASH"
+              addr: 0x0
+              size: 0x40000
+              type: "Flash"
+              access: "RO"
+              default: true
+              startup: true
+              aliases:
+                - name: "PROGRAM_FLASH_alias"
+                  addr: 0x10000000
+                  size: 0x40000
+                  access: "RW"
+            - id: "SRAM"
+              name: "SRAM"
+              addr: 0x20000000
+              size: 0x18000
+              type: "RAM"
+              access: "RW"
+              default: true
+              aliases:
+                - name: "SRAM_alias"
+                  addr: 0x30000000
+                  size: 0x18000
+                  access: "RW"
+            - id: "SRAMX"
+              name: "SRAMX"
+              addr: 0x4000000
+              size: 0x8000
+              type: "RAM"
+              access: "RW"
+              default: true
+              aliases:
+                - name: "SRAMX_alias"
+                  addr: 0x14000000
+                  size: 0x8000
+                  access: "RW"
+            - id: "USB_RAM"
+              name: "USB_RAM"
+              addr: 0x40100000
+              size: 0x4000
+              type: "RAM"
+              access: "RW"
+              default: true
+              aliases:
+                - name: "USB_RAM_alias"
+                  addr: 0x50100000
+                  size: 0x4000
+                  access: "RW"
+            - id: "BootROM"
+              name: "BootROM"
+              addr: 0x3000000
+              size: 0x20000
+              type: "ROM"
+              access: "RO"
+              aliases:
+                - name: "BootROM_alias"
+                  addr: 0x13000000
+                  size: 0x20000
+                  access: "RO"
+        total_memory:
+          ram_size_kb: 128
+          flash_size_kb: 256
+        part:
+          - name: "LPC55S26JBD100"
+          - name: "LPC55S26JEV98"
+          - name: "LPC55S26JBD64"
+        modules:
+...

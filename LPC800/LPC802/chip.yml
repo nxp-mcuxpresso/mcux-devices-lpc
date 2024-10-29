@@ -1,0 +1,65 @@
+---
+
+device.hardware_data:
+  section-type: "manifest_content"
+  belong_to: set.device.LPC802
+  contents:
+    generated_from_chip_model: "yes"
+    devices:
+      - id: "LPC802"
+        full_name: "LPC802"
+        name: "LPC802"
+        platform: "LPC"
+        series: "LPC802"
+        family: "LPC802"
+        subfamily: "LPC802"
+        frequency_mhz: 30
+        core:
+          - name: "Cortex-M0P"
+            type: "cm0p"
+            id: "core0"
+            description: "M0P core"
+            fpu: "NO_FPU"
+            mpu: false
+        memory:
+          memoryBlock:
+            - id: "PROGRAM_FLASH"
+              name: "PROGRAM_FLASH"
+              addr: 0x0
+              size: 0x3f80
+              type: "Flash"
+              access: "RO"
+              default: true
+              startup: true
+            - id: "BOOT_FLASH"
+              name: "BOOT_FLASH"
+              addr: 0x3f80
+              size: 0x80
+              type: "Flash"
+              access: "RO"
+              default: true
+            - id: "SRAM"
+              name: "SRAM"
+              addr: 0x10000000
+              size: 0x7e0
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "IAP_SRAM"
+              name: "IAP_SRAM"
+              addr: 0x100007e0
+              size: 0x20
+              type: "RAM"
+              access: "RW"
+              default: true
+        total_memory:
+          ram_size_kb: 2
+          flash_size_kb: 16
+        part:
+          - name: "LPC802M011JDH20"
+          - name: "LPC802M001JDH16"
+          - name: "LPC802M001JDH20"
+          - name: "LPC802M001JHI33"
+          - name: "LPC802UK"
+        modules:
+...

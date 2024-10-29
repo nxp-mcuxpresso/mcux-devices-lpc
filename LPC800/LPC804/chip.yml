@@ -1,0 +1,65 @@
+---
+
+device.hardware_data:
+  section-type: "manifest_content"
+  belong_to: set.device.LPC804
+  contents:
+    generated_from_chip_model: "yes"
+    devices:
+      - id: "LPC804"
+        full_name: "LPC804"
+        name: "LPC804"
+        platform: "LPC"
+        series: "LPC804"
+        family: "LPC804"
+        subfamily: "LPC804"
+        frequency_mhz: 30
+        core:
+          - name: "Cortex-M0P"
+            type: "cm0p"
+            id: "core0"
+            description: "M0P core"
+            fpu: "NO_FPU"
+            mpu: false
+        memory:
+          memoryBlock:
+            - id: "PROGRAM_FLASH"
+              name: "PROGRAM_FLASH"
+              addr: 0x0
+              size: 0x7f80
+              type: "Flash"
+              access: "RO"
+              default: true
+              startup: true
+            - id: "BOOT_FLASH"
+              name: "BOOT_FLASH"
+              addr: 0x7f80
+              size: 0x80
+              type: "Flash"
+              access: "RO"
+              default: true
+            - id: "SRAM"
+              name: "SRAM"
+              addr: 0x10000000
+              size: 0xfe0
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "IAP_SRAM"
+              name: "IAP_SRAM"
+              addr: 0x10000fe0
+              size: 0x20
+              type: "RAM"
+              access: "RW"
+              default: true
+        total_memory:
+          ram_size_kb: 4
+          flash_size_kb: 32
+        part:
+          - name: "LPC804M101JDH24"
+          - name: "LPC804M101JDH20"
+          - name: "LPC804M111JDH24"
+          - name: "LPC804M101JHI33"
+          - name: "LPC804UK"
+        modules:
+...
