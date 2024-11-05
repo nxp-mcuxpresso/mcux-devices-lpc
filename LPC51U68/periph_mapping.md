@@ -1,1 +1,2 @@
-periph:LPC51U68
+#### Peripheral folder for devices
+* periph:LPC51U68
