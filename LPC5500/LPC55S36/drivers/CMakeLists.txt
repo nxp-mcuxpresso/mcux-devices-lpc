@@ -4,11 +4,13 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 if (CONFIG_MCUX_COMPONENT_driver.clock)
+    mcux_component_version(2.3.3)
     mcux_add_source( SOURCES fsl_clock.c fsl_clock.h )
     mcux_add_include( INCLUDES . )
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.fro_calib)
+    mcux_component_version(2.0.0)
     mcux_add_source( SOURCES fsl_fro_calib.h )
     mcux_add_library(
         LIBS ../iar/iar_lib_fro_calib.a
@@ -23,21 +25,25 @@ if (CONFIG_MCUX_COMPONENT_driver.fro_calib)
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.inputmux_connections)
+    mcux_component_version(2.0.0)
     mcux_add_source( SOURCES fsl_inputmux_connections.h )
     mcux_add_include( INCLUDES . )
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.power)
+    mcux_component_version(2.0.1)
     mcux_add_source( SOURCES fsl_power.c fsl_power.h )
     mcux_add_include( INCLUDES . )
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.reset)
+    mcux_component_version(2.4.0)
     mcux_add_source( SOURCES fsl_reset.c fsl_reset.h )
     mcux_add_include( INCLUDES . )
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.romapi_flash)
+    mcux_component_version(2.0.0)
     mcux_add_source(
         SOURCES 
             ./romapi/flash/src/fsl_flash.c
@@ -49,6 +55,7 @@ if (CONFIG_MCUX_COMPONENT_driver.romapi_flash)
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.romapi_mem_interface)
+    mcux_component_version(2.0.0)
     mcux_add_source(
         SOURCES 
             ./romapi/mem_interface/src/fsl_mem_interface.c
@@ -59,6 +66,7 @@ if (CONFIG_MCUX_COMPONENT_driver.romapi_mem_interface)
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.romapi_nboot)
+    mcux_component_version(2.0.0)
     mcux_add_source(
         SOURCES 
             ./romapi/nboot/src/fsl_nboot.c
@@ -68,6 +76,7 @@ if (CONFIG_MCUX_COMPONENT_driver.romapi_nboot)
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.romapi_runbootloader)
+    mcux_component_version(2.0.0)
     mcux_add_source(
         SOURCES 
             ./romapi/runbootloader/src/fsl_runbootloader.c
@@ -76,6 +85,7 @@ if (CONFIG_MCUX_COMPONENT_driver.romapi_runbootloader)
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.romapi_flash)
+    mcux_component_version(2.0.0)
     mcux_add_source(
         SOURCES 
             ./romapi/flash/src/fsl_flash.c
@@ -87,6 +97,7 @@ if (CONFIG_MCUX_COMPONENT_driver.romapi_flash)
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.romapi)
+    mcux_component_version(2.0.0)
     mcux_add_source(
         SOURCES
             ./romapi/flash/fsl_efuse.h

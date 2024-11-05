@@ -18,6 +18,12 @@
 #define FSL_COMPONENT_ID "platform.drivers.inputmux_connections"
 #endif
 
+/*! @name Driver version */
+/*! @{ */
+/*! @brief INPUTMUX_CONNECTIONS driver version 2.0.0. */
+#define FSL_INPUTMUX_CONNECTIONS_DRIVER_VERSION (MAKE_VERSION(2, 0, 0))
+/*! @} */
+
 /*!
  * @addtogroup inputmux_driver
  * @{

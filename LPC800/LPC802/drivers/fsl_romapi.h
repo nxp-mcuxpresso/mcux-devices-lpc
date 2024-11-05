@@ -14,6 +14,12 @@
 #define FSL_COMPONENT_ID "platform.drivers.romapi"
 #endif
 
+/*! @name Driver version */
+/*! @{ */
+/*! @brief ROMAPI driver version 2.0.0. */
+#define FSL_ROMAPI_DRIVER_VERSION (MAKE_VERSION(2, 0, 0))
+/*! @} */
+
 // Power APIs
 typedef struct _PWRD
 {
