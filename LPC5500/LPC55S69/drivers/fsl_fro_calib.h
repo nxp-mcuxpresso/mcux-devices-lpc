@@ -21,8 +21,8 @@
 
 /*! @name Driver version */
 /*@{*/
-/*! @brief FRO_CALIB driver version 1.0.0. */
-#define FSL_FRO_CALIB_DRIVER_VERSION (MAKE_VERSION(1, 0, 0))
+/*! @brief FRO_CALIB driver version 2.0.0. */
+#define FSL_FRO_CALIB_DRIVER_VERSION (MAKE_VERSION(2, 0, 0))
 /*@}*/
 
 /* Component ID definition, used by tools. */

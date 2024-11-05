@@ -14,6 +14,12 @@
 #define FSL_COMPONENT_ID "platform.drivers.fro_calib"
 #endif
 
+/*! @name Driver version */
+/*! @{ */
+/*! @brief FRO_CALIB driver version 2.0.0. */
+#define FSL_FRO_CALIB_DRIVER_VERSION (MAKE_VERSION(2, 0, 0))
+/*! @} */
+
 #ifdef __cplusplus
 extern "C" {
 #endif

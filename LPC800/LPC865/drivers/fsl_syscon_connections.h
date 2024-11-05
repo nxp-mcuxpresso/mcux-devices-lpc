@@ -19,6 +19,12 @@
 #define FSL_COMPONENT_ID "platform.drivers.syscon_connections"
 #endif
 
+/*! @name Driver version */
+/*! @{ */
+/*! @brief SYSCON_CONNECTIONS driver version 2.0.0. */
+#define FSL_SYSCON_CONNECTIONS_DRIVER_VERSION (MAKE_VERSION(2, 0, 0))
+/*! @} */
+
 /*!
  * @addtogroup syscon
  * @{
