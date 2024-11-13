@@ -33,6 +33,7 @@ ENTRY(Reset_Handler)
 
 HEAP_SIZE  = DEFINED(__heap_size__)  ? __heap_size__  : 0x040;
 STACK_SIZE = DEFINED(__stack_size__) ? __stack_size__ : 0x040;
+__valid_user_code_checksum = 0 - (__StackTop + Reset_Handler + NMI_Handler + HardFault_Handler + 3);
 
 /* Specify the memory areas */
 MEMORY
