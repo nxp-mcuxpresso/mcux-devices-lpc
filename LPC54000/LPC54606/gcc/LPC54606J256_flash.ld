@@ -7,15 +7,13 @@
 **     Compiler:            GNU C Compiler
 **     Reference manual:    LPC546xx User manual Rev.1.9  5 June 2017
 **     Version:             rev. 1.2, 2017-06-08
-**     Build:               b190922
+**     Build:               b241125
 **
 **     Abstract:
 **         Linker file for the GNU C Compiler
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2019 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

@@ -4,11 +4,11 @@
 /*            LPC51U68                                                       */
 /*  @version: 1.0                                                            */
 /*  @date:    2017-12-15                                                     */
-/*  @build:   b231018                                                        */
+/*  @build:   b240704                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */
-/* Copyright 2016-2023 NXP                                                   */
+/* Copyright 2016-2024 NXP                                                   */
 /* SPDX-License-Identifier: BSD-3-Clause                                     */
 /*****************************************************************************/
 /* Version: GCC for ARM Embedded Processors                                  */

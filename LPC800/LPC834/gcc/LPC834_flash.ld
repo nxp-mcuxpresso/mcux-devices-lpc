@@ -4,15 +4,13 @@
 **     Compiler:            GNU C Compiler
 **     Reference manual:    LPC83x User manual Rev.1.1  5 October 2016
 **     Version:             rev. 1.0, 2017-10-17
-**     Build:               b200408
+**     Build:               b241125
 **
 **     Abstract:
 **         Linker file for the GNU C Compiler
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2020 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

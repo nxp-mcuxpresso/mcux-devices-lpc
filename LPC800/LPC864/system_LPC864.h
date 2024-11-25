@@ -11,7 +11,7 @@
 **
 **     Reference manual:    LPC86x User manual Rev.1  March 2022
 **     Version:             rev. 1.0, 2022-03-15
-**     Build:               b230713
+**     Build:               b240704
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -19,7 +19,7 @@
 **         the oscillator (PLL) that is part of the microcontroller device.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2023 NXP
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

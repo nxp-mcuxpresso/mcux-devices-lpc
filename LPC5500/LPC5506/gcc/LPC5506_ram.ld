@@ -6,15 +6,13 @@
 **     Compiler:            GNU C Compiler
 **     Reference manual:    LPC55S0x/LPC550x User manual Rev.0.3  14 August 2020
 **     Version:             rev. 1.0, 2020-04-09
-**     Build:               b220622
+**     Build:               b241125
 **
 **     Abstract:
 **         Linker file for the GNU C Compiler
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2022 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

@@ -2,13 +2,13 @@
 /*  @file:    startup_LPC54S016.s                                            */
 /*  @purpose: CMSIS Cortex-M4 Core Device Startup File                       */
 /*            LPC54S016                                                      */
-/*  @version: 1.0                                                            */
-/*  @date:    2018-4-20                                                      */
-/*  @build:   b231018                                                        */
+/*  @version: 1.2                                                            */
+/*  @date:    2017-6-8                                                       */
+/*  @build:   b240704                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */
-/* Copyright 2016-2023 NXP                                                   */
+/* Copyright 2016-2024 NXP                                                   */
 /* SPDX-License-Identifier: BSD-3-Clause                                     */
 /*****************************************************************************/
 /* Version: GCC for ARM Embedded Processors                                  */

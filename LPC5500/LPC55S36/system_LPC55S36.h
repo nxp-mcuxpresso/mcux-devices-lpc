@@ -10,7 +10,7 @@
 **
 **     Reference manual:    LPC55S3x Reference Manual Rev. DraftG, 07/2021
 **     Version:             rev. 1.1, 2021-08-04
-**     Build:               b241024
+**     Build:               b241025
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that

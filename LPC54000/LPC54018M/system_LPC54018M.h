@@ -10,7 +10,7 @@
 **
 **     Reference manual:    LPC54018JxM/LPC54S018JxM User manual Rev.1.0 20 September 2018
 **     Version:             rev. 1.2, 2017-06-08
-**     Build:               b201015
+**     Build:               b240704
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -18,9 +18,7 @@
 **         the oscillator (PLL) that is part of the microcontroller device.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2020 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

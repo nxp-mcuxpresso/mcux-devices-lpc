@@ -10,7 +10,7 @@
 **
 **     Reference manual:    LPC55S0x/LPC550x User manual Rev.0.3  14 August 2020
 **     Version:             rev. 1.0, 2020-04-09
-**     Build:               b220117
+**     Build:               b240704
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -18,9 +18,7 @@
 **         the oscillator (PLL) that is part of the microcontroller device.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2022 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

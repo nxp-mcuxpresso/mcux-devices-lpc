@@ -27,7 +27,7 @@ __Vectors:
     .long   0                                               /* Reserved*/
     .long   0                                               /* Reserved*/
     .long   0                                               /* Reserved*/
-    .long   __valid_user_code_checksum                      /* Valid user code checksum */
+    .long   0                                               /* Reserved*/
     .long   0                                               /* Reserved*/
     .long   0                                               /* Reserved*/
     .long   0                                               /* Reserved*/

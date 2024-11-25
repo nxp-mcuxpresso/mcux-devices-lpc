@@ -12,7 +12,7 @@
 **
 **     Reference manual:    LPC84x User manual Rev.1.6  8 Dec 2017
 **     Version:             rev. 1.2, 2017-06-08
-**     Build:               b240408
+**     Build:               b240704
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that

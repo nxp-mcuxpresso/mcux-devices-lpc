@@ -7,15 +7,13 @@
 **     Compiler:            Keil ARM C/C++ Compiler
 **     Reference manual:    LPC51U68 User manual User manual Rev. 1.0 13 Dec 2017
 **     Version:             rev. 1.0, 2017-12-15
-**     Build:               b200408
+**     Build:               b241125
 **
 **     Abstract:
 **         Linker file for the Keil ARM C/C++ Compiler
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2020 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
