@@ -14,6 +14,6 @@ if (NOT DEFINED core_id)
     message(FATAL_ERROR "Please specify core_id for multicore device.")
 endif()
 
-include(${SdkRootDirPath}/devices/LPC/LPC5500/LPC55S66/${core_id}/variable.cmake)
+include(${SdkRootDirPath}/${device_root}/LPC/LPC5500/LPC55S66/${core_id}/variable.cmake)
 
 #### Source record
