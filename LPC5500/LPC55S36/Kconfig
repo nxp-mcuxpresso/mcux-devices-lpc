@@ -20,7 +20,7 @@ config MCUX_HW_DEVICE_LPC55S36
     select MCUX_COMPONENT_component.usart_adapter if MCUX_COMPONENT_component.serial_manager_uart
     select MCUX_COMPONENT_component.usart_adapter if MCUX_COMPONENT_utility.debug_console_lite
     select MCUX_COMPONENT_component.els_pkc if MCUX_COMPONENT_driver.prince
-    select MCUX_COMPONENT_driver.mem_interface if MCUX_COMPONENT_driver.prince
+    select MCUX_COMPONENT_driver.romapi_mem_interface if MCUX_COMPONENT_driver.prince
     select MCUX_COMPONENT_driver.lpc_dma if MCUX_COMPONENT_driver.dmic_dma
     select MCUX_COMPONENT_driver.lpc_dma if MCUX_COMPONENT_driver.flexspi_dma
     select MCUX_COMPONENT_driver.lpc_dma if MCUX_COMPONENT_driver.flexcomm_i2c_dma
