@@ -52,8 +52,8 @@ define symbol m_text_end                       = 0x0002FFFF;
 }
 
 if (isdefinedsymbol(XIP_IMAGE)) {
-define symbol m_data_start                     = 0x00000004;
-define symbol m_data_end                       = 0x0002FFFC - __size_cstack__;
+define symbol m_data_start                     = 0x00000008;
+define symbol m_data_end                       = 0x0002FFF8 - __size_cstack__;
 } else {
 define symbol m_data_start                     = 0x20000000;
 define symbol m_data_end                       = 0x20027FFF - __size_cstack__;

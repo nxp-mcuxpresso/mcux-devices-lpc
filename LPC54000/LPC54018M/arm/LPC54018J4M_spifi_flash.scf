@@ -53,8 +53,8 @@
 #endif
 
 #if (defined(XIP_IMAGE))
-#define  m_data_start                  0x00000004
-#define  m_data_size                   0x0002FFFC
+#define  m_data_start                  0x00000008
+#define  m_data_size                   0x0002FFF8
 #else
 #define  m_data_start                  0x20000000
 #define  m_data_size                   0x00028000
