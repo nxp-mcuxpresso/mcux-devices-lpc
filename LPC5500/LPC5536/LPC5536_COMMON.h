@@ -11,7 +11,7 @@
 **
 **     Reference manual:    LPC55S3x Reference Manual Rev. DraftG, 07/2021
 **     Version:             rev. 1.1, 2021-08-04
-**     Build:               b241024
+**     Build:               b241225
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPC5536
@@ -376,20 +376,22 @@ typedef enum IRQn {
   /** Array initializer of CACHE64_CTRL peripheral base pointers */
   #define CACHE64_CTRL_BASE_PTRS                   { CACHE64_CTRL0 }
 #endif
+/** CACHE64_CTRL physical memory base alias count */
+ #define CACHE64_CTRL_PHYMEM_BASE_ALIAS_COUNT     (2)
 #if (defined(__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE & 0x2))
 /** CACHE64_CTRL physical memory base address */
- #define CACHE64_CTRL_PHYMEM_BASES                { 0x18000000u, 0x38000000u }
+ #define CACHE64_CTRL_PHYMEM_BASES                { {0x18000000u, 0x38000000u} }
 /** CACHE64_CTRL physical memory size */
- #define CACHE64_CTRL_PHYMEM_SIZES                { 0x08000000u, 0x08000000u }
+ #define CACHE64_CTRL_PHYMEM_SIZES                { {0x08000000u, 0x08000000u} }
 /** CACHE64_CTRL physical memory base address */
- #define CACHE64_CTRL_PHYMEM_BASES_NS             { 0x08000000u, 0x28000000u }
+ #define CACHE64_CTRL_PHYMEM_BASES_NS             { {0x08000000u, 0x28000000u} }
 /** CACHE64_CTRL physical memory size */
- #define CACHE64_CTRL_PHYMEM_SIZES_NS             { 0x08000000u, 0x08000000u }
+ #define CACHE64_CTRL_PHYMEM_SIZES_NS             { {0x08000000u, 0x08000000u} }
 #else
 /** CACHE64_CTRL physical memory base address */
- #define CACHE64_CTRL_PHYMEM_BASES                { 0x08000000u, 0x28000000u }
+ #define CACHE64_CTRL_PHYMEM_BASES                { {0x08000000u, 0x28000000u} }
 /** CACHE64_CTRL physical memory size */
- #define CACHE64_CTRL_PHYMEM_SIZES                { 0x08000000u, 0x08000000u }
+ #define CACHE64_CTRL_PHYMEM_SIZES                { {0x08000000u, 0x08000000u} }
 #endif
 /* Backward compatibility */
 
