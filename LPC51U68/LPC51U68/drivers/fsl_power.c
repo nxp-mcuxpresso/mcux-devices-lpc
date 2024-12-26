@@ -13,12 +13,6 @@
 #define FSL_COMPONENT_ID "platform.drivers.power"
 #endif
 
-/*! @name Driver version */
-/*@{*/
-/*! @brief LPC51U68 power contorl version 2.0.0. */
-#define FSL_LPC51U68_POWER_CONTROL_VERSION (MAKE_VERSION(2, 0, 0))
-/*@}*/
-
 #define POWER_BASE (0x40020000u)
 #define POWER ((POWER_Type *)POWER_BASE)
 #define BODYBIAS_BASE (0x40030000u)
@@ -496,5 +490,5 @@ void POWER_SetLowPowerVoltageForFreq(uint32_t freq)
 
 uint32_t POWER_GetLibVersion(void)
 {
-    return FSL_LPC51U68_POWER_CONTROL_VERSION;
+    return FSL_POWER_DRIVER_VERSION;
 }
