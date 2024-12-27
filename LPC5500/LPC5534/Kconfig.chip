@@ -129,11 +129,6 @@ config MCUX_HW_IP_DriverType_CACHE64_POLSEL
     default y
     depends on MCUX_HW_DEVICE_ID_LPC5534
 
-config MCUX_HW_IP_DriverType_CASPER
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC5534
-
 config MCUX_HW_IP_DriverType_CDOG
     bool
     default y
@@ -204,11 +199,6 @@ config MCUX_HW_IP_DriverType_GPIO_PORT
     default y
     depends on MCUX_HW_DEVICE_ID_LPC5534
 
-config MCUX_HW_IP_DriverType_HASHCRYPT
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC5534
-
 config MCUX_HW_IP_DriverType_HSCMP
     bool
     default y
@@ -244,17 +234,7 @@ config MCUX_HW_IP_DriverType_LPC_FLASH
     default y
     depends on MCUX_HW_DEVICE_ID_LPC5534
 
-config MCUX_HW_IP_DriverType_LPC_GPIO
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC5534
-
 config MCUX_HW_IP_DriverType_LPC_PMC
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC5534
-
-config MCUX_HW_IP_DriverType_LPC_RTC
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_LPC5534
@@ -289,11 +269,6 @@ config MCUX_HW_IP_DriverType_PINT
     default y
     depends on MCUX_HW_DEVICE_ID_LPC5534
 
-config MCUX_HW_IP_DriverType_PLU
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC5534
-
 config MCUX_HW_IP_DriverType_POWERQUAD
     bool
     default y
@@ -310,11 +285,6 @@ config MCUX_HW_IP_DriverType_PUFV3
     depends on MCUX_HW_DEVICE_ID_LPC5534
 
 config MCUX_HW_IP_DriverType_PWM
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC5534
-
-config MCUX_HW_IP_DriverType_RNG_1
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_LPC5534
