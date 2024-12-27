@@ -266,11 +266,6 @@ config MCUX_HW_IP_DriverType_SDMA
     default y
     depends on MCUX_HW_DEVICE_ID_LPC54608J512
 
-config MCUX_HW_IP_DriverType_SHA
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC54608J512
-
 config MCUX_HW_IP_DriverType_SPIFI
     bool
     default y
