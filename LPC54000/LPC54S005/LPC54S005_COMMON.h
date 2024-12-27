@@ -807,6 +807,8 @@ typedef enum IRQn {
  * @{
  */
 
+#define SPIFI_IRQn SPIFI0_IRQn
+
 /** EMC CS base address */
 #define EMC_CS0_BASE                                (0x80000000u)
 #define EMC_CS1_BASE                                (0x88000000u)
