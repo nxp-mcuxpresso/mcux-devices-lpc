@@ -17,5 +17,3 @@ config MCUX_HW_DEVICE_LPC834
     # component dependency
     select MCUX_COMPONENT_driver.syscon if MCUX_COMPONENT_component.lpc_gpio_adapter
     select MCUX_COMPONENT_component.miniusart_adapter if MCUX_COMPONENT_utility.debug_console_lite
-    select MCUX_COMPONENT_driver.lpc_dma if MCUX_COMPONENT_driver.flexcomm_i2c_dma
-    select MCUX_COMPONENT_driver.lpc_dma if MCUX_COMPONENT_driver.flexcomm_usart_dma

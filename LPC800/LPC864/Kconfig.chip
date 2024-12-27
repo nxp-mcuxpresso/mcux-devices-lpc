@@ -111,11 +111,6 @@ config MCUX_HW_IP_DriverType_ADC12_5M
     default y
     depends on MCUX_HW_DEVICE_ID_LPC864
 
-config MCUX_HW_IP_DriverType_CTIMER
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC864
-
 config MCUX_HW_IP_DriverType_FTM
     bool
     default y
@@ -192,11 +187,6 @@ config MCUX_HW_IP_DriverType_MRT
     depends on MCUX_HW_DEVICE_ID_LPC864
 
 config MCUX_HW_IP_DriverType_PINT
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC864
-
-config MCUX_HW_IP_DriverType_SCTIMER
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_LPC864

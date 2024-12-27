@@ -101,16 +101,6 @@ config MCUX_HW_IP_DriverType_ADC12_5M
     default y
     depends on MCUX_HW_DEVICE_ID_LPC834
 
-config MCUX_HW_IP_DriverType_FLEXCOMM_I2C
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC834
-
-config MCUX_HW_IP_DriverType_FLEXCOMM_USART
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC834
-
 config MCUX_HW_IP_DriverType_GPIO_PORT
     bool
     default y
