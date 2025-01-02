@@ -274,16 +274,6 @@ config MCUX_HW_IP_DriverType_POWERQUAD
     default y
     depends on MCUX_HW_DEVICE_ID_LPC5534
 
-config MCUX_HW_IP_DriverType_PRINCE
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC5534
-
-config MCUX_HW_IP_DriverType_PUFV3
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC5534
-
 config MCUX_HW_IP_DriverType_PWM
     bool
     default y

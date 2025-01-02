@@ -254,11 +254,6 @@ config MCUX_HW_IP_DriverType_PLU
     default y
     depends on MCUX_HW_DEVICE_ID_LPC5528
 
-config MCUX_HW_IP_DriverType_PRINCE
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC5528
-
 config MCUX_HW_IP_DriverType_RNG_1
     bool
     default y
