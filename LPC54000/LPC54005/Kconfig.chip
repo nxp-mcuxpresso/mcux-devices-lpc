@@ -101,10 +101,6 @@ config MCUX_HW_IP_DriverType_ADC12_5M
     default y
     depends on MCUX_HW_DEVICE_ID_LPC54005
 
-config MCUX_HW_IP_DriverType_AES
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC54005
 
 config MCUX_HW_IP_DriverType_ASYNC_SYSCON_FREQME
     bool
@@ -176,17 +172,7 @@ config MCUX_HW_IP_DriverType_IOCON
     default y
     depends on MCUX_HW_DEVICE_ID_LPC54005
 
-config MCUX_HW_IP_DriverType_LCD
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC54005
-
 config MCUX_HW_IP_DriverType_LPC_ASYNC_SYSCON
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC54005
-
-config MCUX_HW_IP_DriverType_LPC_ENET
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_LPC54005
@@ -197,11 +183,6 @@ config MCUX_HW_IP_DriverType_LPC_SMARTCARD
     depends on MCUX_HW_DEVICE_ID_LPC54005
 
 config MCUX_HW_IP_DriverType_LPC_SWD
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC54005
-
-config MCUX_HW_IP_DriverType_MCAN
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_LPC54005
@@ -222,11 +203,6 @@ config MCUX_HW_IP_DriverType_OTPC
     depends on MCUX_HW_DEVICE_ID_LPC54005
 
 config MCUX_HW_IP_DriverType_PINT
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC54005
-
-config MCUX_HW_IP_DriverType_PUF
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_LPC54005

@@ -203,11 +203,6 @@ config MCUX_HW_IP_DriverType_IOCON
     default y
     depends on MCUX_HW_DEVICE_ID_LPC54616J512 || MCUX_HW_DEVICE_ID_LPC54616J256
 
-config MCUX_HW_IP_DriverType_LCD
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC54616J512 || MCUX_HW_DEVICE_ID_LPC54616J256
-
 config MCUX_HW_IP_DriverType_LPC_ASYNC_SYSCON
     bool
     default y
