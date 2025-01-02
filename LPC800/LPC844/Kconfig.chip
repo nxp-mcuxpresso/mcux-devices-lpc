@@ -116,17 +116,7 @@ config MCUX_HW_IP_DriverType_ADC12_5M
     default y
     depends on MCUX_HW_DEVICE_ID_LPC844
 
-config MCUX_HW_IP_DriverType_CAPT
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC844
-
 config MCUX_HW_IP_DriverType_CTIMER
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_LPC844
-
-config MCUX_HW_IP_DriverType_DAC10
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_LPC844
