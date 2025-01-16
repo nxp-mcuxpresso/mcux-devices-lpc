@@ -188,7 +188,6 @@ static void DeepSleepReloc(uint64_t peripheral_ctrl)
     uint32_t pdruncfg0_val, pdruncfg1_val, pmsk;
     uint32_t ahbclkctrl0_val, ahbclkctrl2_val, autocgor_val;
     volatile uint32_t i, j;
-    volatile uint32_t temp;
     uint32_t vd1_saved, vd4_saved, mem_banks_to_power;
 
     pmsk = __get_PRIMASK();
@@ -325,7 +324,7 @@ static void DeepSleepReloc(uint64_t peripheral_ctrl)
     }
 
     /* Dummy read back flash to know that initialisation is completed. Any location above vector table. */
-    temp = *(volatile uint32_t *)0x1000;
+    i = *(volatile uint32_t *)0x1000;
 
     /* Reload OTP latches from the fuses */
     if ((SYSCON->PDSLEEPCFG[0] & PDRUNCFG_PD_VD6) && !(SYSCON->PDRUNCFG[0] & PDRUNCFG_PD_VD6))
