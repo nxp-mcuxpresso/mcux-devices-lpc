@@ -6,27 +6,27 @@
 menu "Device specific drivers configuration"
 
     config MCUX_COMPONENT_driver.clock
-         bool "Use driver clock"
+         bool "clock"
          default y
 
     config MCUX_COMPONENT_driver.inputmux_connections
-         bool "Use driver inputmux_connections"
+         bool "inputmux_connections"
          default y
 
     config MCUX_COMPONENT_driver.power
-         bool "Use driver power"
+         bool "power"
          default y
 
     config MCUX_COMPONENT_driver.reset
-         bool "Use driver reset"
+         bool "reset"
          default y
 
     config MCUX_COMPONENT_driver.swm_connections
-         bool "Use driver swm_connections"
+         bool "swm_connections"
          default y
 
     config MCUX_COMPONENT_driver.syscon_connections
-         bool "Use driver syscon_connections"
+         bool "syscon_connections"
          default y
 
 endmenu

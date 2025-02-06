@@ -63,13 +63,13 @@ config MCUX_HW_DEVICE_ID_LPC5514
 choice MCUX_HW_DEVICE_PART_LPC5514
     prompt "Device LPC5514 Part"
     config MCUX_HW_DEVICE_PART_LPC5514JBD100
-    bool "Device part LPC5514JBD100"
+    bool "LPC5514JBD100"
     select MCUX_HW_DEVICE_ID_LPC5514
     config MCUX_HW_DEVICE_PART_LPC5514JBD64
-    bool "Device part LPC5514JBD64"
+    bool "LPC5514JBD64"
     select MCUX_HW_DEVICE_ID_LPC5514
     config MCUX_HW_DEVICE_PART_LPC5514JEV59
-    bool "Device part LPC5514JEV59"
+    bool "LPC5514JEV59"
     select MCUX_HW_DEVICE_ID_LPC5514
 endchoice
 
