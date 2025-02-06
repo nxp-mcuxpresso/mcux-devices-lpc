@@ -55,7 +55,7 @@ config MCUX_HW_DEVICE_ID_LPC832
 choice MCUX_HW_DEVICE_PART_LPC832
     prompt "Device LPC832 Part"
     config MCUX_HW_DEVICE_PART_LPC832M101FDH20
-    bool "Device part LPC832M101FDH20"
+    bool "LPC832M101FDH20"
     select MCUX_HW_DEVICE_ID_LPC832
 endchoice
 

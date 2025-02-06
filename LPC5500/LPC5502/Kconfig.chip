@@ -63,10 +63,10 @@ config MCUX_HW_DEVICE_ID_LPC5502
 choice MCUX_HW_DEVICE_PART_LPC5502
     prompt "Device LPC5502 Part"
     config MCUX_HW_DEVICE_PART_LPC5502JBD64
-    bool "Device part LPC5502JBD64"
+    bool "LPC5502JBD64"
     select MCUX_HW_DEVICE_ID_LPC5502
     config MCUX_HW_DEVICE_PART_LPC5502JHI48
-    bool "Device part LPC5502JHI48"
+    bool "LPC5502JHI48"
     select MCUX_HW_DEVICE_ID_LPC5502
 endchoice
 
