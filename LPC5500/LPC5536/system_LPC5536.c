@@ -11,7 +11,7 @@
 **
 **     Reference manual:    LPC55S3x Reference Manual Rev. DraftG, 07/2021
 **     Version:             rev. 1.1, 2021-08-04
-**     Build:               b241025
+**     Build:               b250206
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -19,7 +19,7 @@
 **         the oscillator (PLL) that is part of the microcontroller device.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -48,6 +48,9 @@
 #include <stdint.h>
 #include "fsl_device_registers.h"
 
+#if __has_include("fsl_clock.h")
+#include "fsl_clock.h"
+#endif
 
 
 /* ----------------------------------------------------------------------------
@@ -98,7 +101,10 @@ __attribute__ ((weak)) void SystemInit (void) {
    ---------------------------------------------------------------------------- */
 
 void SystemCoreClockUpdate (void) {
-
+#if __has_include("fsl_clock.h")
+    /* Get frequency of Core System */
+    SystemCoreClock = CLOCK_GetCoreSysClkFreq();
+#endif
 }
 
 /* ----------------------------------------------------------------------------
