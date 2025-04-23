@@ -10,13 +10,13 @@
 **
 **     Reference manual:    LPC51U68 User manual User manual Rev. 1.0 13 Dec 2017
 **     Version:             rev. 1.0, 2017-12-15
-**     Build:               b240704
+**     Build:               b250321
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPC51U68
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -129,14 +129,14 @@ typedef enum IRQn {
 #include "core_cm0plus.h"              /* Core Peripheral Access Layer */
 #include "system_LPC51U68.h"           /* Device specific configuration file */
 
-#define LPC51U68_SERIES
-/* CPU specific feature definitions */
-#include "LPC51U68_features.h"
-
 /*!
  * @}
  */ /* end of group Cortex_Core_Configuration */
 
+
+#define LPC51U68_SERIES
+/* CPU specific feature definitions */
+#include "LPC51U68_features.h"
 
 /* ADC - Peripheral instance base addresses */
 /** Peripheral ADC0 base address */

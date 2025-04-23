@@ -12,7 +12,7 @@
 **
 **     Reference manual:    LPC55S6x/LPC55S2x/LPC552x User manual(UM11126) Rev.1.3  16 May 2019
 **     Version:             rev. 1.1, 2019-05-16
-**     Build:               b240704
+**     Build:               b250321
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -20,7 +20,7 @@
 **         the oscillator (PLL) that is part of the microcontroller device.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -263,6 +263,10 @@ __attribute__ ((weak)) void SystemInit (void) {
 #if !defined(DONT_ENABLE_DISABLED_RAMBANKS)
     SYSCON->AHBCLKCTRLSET[0] = SYSCON_AHBCLKCTRL0_SRAM_CTRL1_MASK | SYSCON_AHBCLKCTRL0_SRAM_CTRL2_MASK
                           | SYSCON_AHBCLKCTRL0_SRAM_CTRL3_MASK | SYSCON_AHBCLKCTRL0_SRAM_CTRL4_MASK;
+#endif
+/* Optionally enable prefetch */
+#if !defined(DONT_ENABLE_FLASH_PREFETCH)
+    SYSCON->FMCCR |= SYSCON_FMCCR_PREFEN_MASK;
 #endif
   SystemInitHook();
 }

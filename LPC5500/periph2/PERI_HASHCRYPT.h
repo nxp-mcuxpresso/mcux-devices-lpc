@@ -18,13 +18,13 @@
 **                          LPC55S16JEV98
 **
 **     Version:             rev. 1.1, 2019-12-03
-**     Build:               b240704
+**     Build:               b250321
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for HASHCRYPT
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -206,8 +206,8 @@ typedef struct {
 #define HASHCRYPT_CTRL_AESFLUSH_MASK             (0x2000U)
 #define HASHCRYPT_CTRL_AESFLUSH_SHIFT            (13U)
 /*! AESFLUSH - Flushes the AES engine registers. This bit self clears.
- *  0b1..Flush the AES engine registers.
  *  0b0..Do not flush the AES engine registers.
+ *  0b1..Flush the AES engine registers.
  */
 #define HASHCRYPT_CTRL_AESFLUSH(x)               (((uint32_t)(((uint32_t)(x)) << HASHCRYPT_CTRL_AESFLUSH_SHIFT)) & HASHCRYPT_CTRL_AESFLUSH_MASK)
 /*! @} */

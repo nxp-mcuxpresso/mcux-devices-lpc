@@ -15,13 +15,13 @@
 **                          LPC55S06JHI48
 **
 **     Version:             rev. 1.0, 2020-04-09
-**     Build:               b240704
+**     Build:               b250321
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ADC
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -127,7 +127,7 @@ typedef struct {
   __IO uint32_t CFG;                               /**< ADC Configuration Register, offset: 0x20 */
   __IO uint32_t PAUSE;                             /**< ADC Pause Register, offset: 0x24 */
        uint8_t RESERVED_1[12];
-  __O  uint32_t SWTRIG;                            /**< Software Trigger Register, offset: 0x34 */
+  __IO uint32_t SWTRIG;                            /**< Software Trigger Register, offset: 0x34 */
   __IO uint32_t TSTAT;                             /**< Trigger Status Register, offset: 0x38 */
        uint8_t RESERVED_2[4];
   __IO uint32_t OFSTRIM;                           /**< ADC Offset Trim Register, offset: 0x40 */

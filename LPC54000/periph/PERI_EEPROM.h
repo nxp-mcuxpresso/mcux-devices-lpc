@@ -26,13 +26,13 @@
 **                          LPC54628J512ET180
 **
 **     Version:             rev. 1.2, 2017-06-08
-**     Build:               b240704
+**     Build:               b250321
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for EEPROM
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

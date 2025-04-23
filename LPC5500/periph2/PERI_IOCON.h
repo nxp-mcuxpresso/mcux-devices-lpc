@@ -18,13 +18,13 @@
 **                          LPC55S16JEV98
 **
 **     Version:             rev. 1.1, 2019-12-03
-**     Build:               b240704
+**     Build:               b250321
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for IOCON
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -207,8 +207,8 @@ typedef struct {
 #define IOCON_PIO_ECS_MASK                       (0x2000U)
 #define IOCON_PIO_ECS_SHIFT                      (13U)
 /*! ECS - Pull-up current source enable in I2C mode.
- *  0b1..Enabled. Pull resistor is conencted.
  *  0b0..Disabled. IO is in open drain cell.
+ *  0b1..Enabled. Pull resistor is conencted.
  */
 #define IOCON_PIO_ECS(x)                         (((uint32_t)(((uint32_t)(x)) << IOCON_PIO_ECS_SHIFT)) & IOCON_PIO_ECS_MASK)
 

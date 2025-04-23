@@ -4,11 +4,11 @@
 ;            LPC51U68
 ;  @version: 1.0
 ;  @date:    2017-12-15
-;  @build:   b240704
+;  @build:   b250321
 ; -------------------------------------------------------------------------
 ;
 ; Copyright 1997-2016 Freescale Semiconductor, Inc.
-; Copyright 2016-2024 NXP
+; Copyright 2016-2025 NXP
 ; SPDX-License-Identifier: BSD-3-Clause
 ;
 ; The modules in this file are included in the libraries, and may be replaced
@@ -128,10 +128,10 @@ __Vectors_Size  EQU   __Vectors_End - __Vectors
         PUBWEAK Reset_Handler
         SECTION .text:CODE:REORDER:NOROOT(2)
 Reset_Handler
-        LDR     r0, =SystemInit
-        BLX     r0
-        LDR     r0, =__iar_program_start
-        BX      r0
+        LDR     R0, =SystemInit
+        BLX     R0
+        LDR     R0, =__iar_program_start
+        BX      R0
 
         PUBWEAK NMI_Handler
         SECTION .text:CODE:REORDER:NOROOT(1)

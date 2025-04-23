@@ -10,13 +10,13 @@
 **
 **     Reference manual:    LPC540xx/LPC54S0xx User manual Rev.0.8 5 June 2018
 **     Version:             rev. 1.2, 2017-06-08
-**     Build:               b240704
+**     Build:               b250321
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPC54005
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -164,14 +164,14 @@ typedef enum IRQn {
 #include "core_cm4.h"                  /* Core Peripheral Access Layer */
 #include "system_LPC54005.h"           /* Device specific configuration file */
 
-#define LPC54005_SERIES
-/* CPU specific feature definitions */
-#include "LPC54005_features.h"
-
 /*!
  * @}
  */ /* end of group Cortex_Core_Configuration */
 
+
+#define LPC54005_SERIES
+/* CPU specific feature definitions */
+#include "LPC54005_features.h"
 
 /* ADC - Peripheral instance base addresses */
 /** Peripheral ADC0 base address */

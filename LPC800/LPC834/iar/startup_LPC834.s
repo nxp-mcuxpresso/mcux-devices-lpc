@@ -128,10 +128,10 @@ __Vectors_Size  EQU   __Vectors_End - __Vectors
         PUBWEAK Reset_Handler
         SECTION .text:CODE:REORDER:NOROOT(2)
 Reset_Handler
-        LDR     r0, =SystemInit
-        BLX     r0
-        LDR     r0, =__iar_program_start
-        BX      r0
+        LDR     R0, =SystemInit
+        BLX     R0
+        LDR     R0, =__iar_program_start
+        BX      R0
 
         PUBWEAK NMI_Handler
         SECTION .text:CODE:REORDER:NOROOT(1)

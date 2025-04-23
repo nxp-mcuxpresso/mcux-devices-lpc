@@ -8,13 +8,13 @@
 **                          LPC865M201JHI48
 **
 **     Version:             rev. 1.0, 2022-03-15
-**     Build:               b240704
+**     Build:               b250206
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for GPIO
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

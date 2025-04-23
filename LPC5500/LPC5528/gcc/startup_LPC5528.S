@@ -4,11 +4,11 @@
 /*            LPC5528                                                        */
 /*  @version: 1.1                                                            */
 /*  @date:    2019-5-16                                                      */
-/*  @build:   b240704                                                        */
+/*  @build:   b250321                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */
-/* Copyright 2016-2024 NXP                                                   */
+/* Copyright 2016-2025 NXP                                                   */
 /* SPDX-License-Identifier: BSD-3-Clause                                     */
 /*****************************************************************************/
 /* Version: GCC for ARM Embedded Processors                                  */
@@ -124,8 +124,8 @@ Reset_Handler:
     str     r1, [r0]
     ldr     r2, [r1]
     msr     msp, r2
-    ldr     R0, =__StackLimit
-    msr     msplim, R0
+    ldr     r0, =__StackLimit
+    msr     msplim, r0
 #ifndef __NO_SYSTEM_INIT
     ldr   r0,=SystemInit
     blx   r0

@@ -11,13 +11,13 @@
 **
 **     Reference manual:    LPC86x User manual Rev.1  March 2022
 **     Version:             rev. 1.0, 2022-03-15
-**     Build:               b240704
+**     Build:               b250206
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPC865
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -132,14 +132,14 @@ typedef enum IRQn {
 #include "core_cm0plus.h"              /* Core Peripheral Access Layer */
 #include "system_LPC865.h"             /* Device specific configuration file */
 
-#define LPC865_SERIES
-/* CPU specific feature definitions */
-#include "LPC865_features.h"
-
 /*!
  * @}
  */ /* end of group Cortex_Core_Configuration */
 
+
+#define LPC865_SERIES
+/* CPU specific feature definitions */
+#include "LPC865_features.h"
 
 /* ACOMP - Peripheral instance base addresses */
 /** Peripheral ACOMP base address */

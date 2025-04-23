@@ -30,13 +30,13 @@
 **                          LPC55S69JEV98_cm33_core1
 **
 **     Version:             rev. 1.1, 2019-05-16
-**     Build:               b240704
+**     Build:               b250321
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for PMC
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -901,8 +901,8 @@ typedef struct {
 #define PMC_MISCCTRL_WAKUPIO_RST_MASK            (0x8000U)
 #define PMC_MISCCTRL_WAKUPIO_RST_SHIFT           (15U)
 /*! WAKUPIO_RST - WAKEUP IO event detector reset control.
- *  0b1..Wakeup IO is reset.
  *  0b0..Wakeup IO is not reset.
+ *  0b1..Wakeup IO is reset.
  */
 #define PMC_MISCCTRL_WAKUPIO_RST(x)              (((uint32_t)(((uint32_t)(x)) << PMC_MISCCTRL_WAKUPIO_RST_SHIFT)) & PMC_MISCCTRL_WAKUPIO_RST_MASK)
 /*! @} */

@@ -4,11 +4,11 @@
 ;            LPC55S69_cm33_core1
 ;  @version: 1.1
 ;  @date:    2019-5-16
-;  @build:   b240704
+;  @build:   b250321
 ; -------------------------------------------------------------------------
 ;
 ; Copyright 1997-2016 Freescale Semiconductor, Inc.
-; Copyright 2016-2024 NXP
+; Copyright 2016-2025 NXP
 ; SPDX-License-Identifier: BSD-3-Clause
 ;
 ; The modules in this file are included in the libraries, and may be replaced

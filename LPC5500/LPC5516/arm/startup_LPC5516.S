@@ -4,11 +4,11 @@
 /*            LPC5516                                                        */
 /*  @version: 1.1                                                            */
 /*  @date:    2019-12-3                                                      */
-/*  @build:   b240704                                                        */
+/*  @build:   b250321                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */
-/* Copyright 2016-2024 NXP                                                   */
+/* Copyright 2016-2025 NXP                                                   */
 /* SPDX-License-Identifier: BSD-3-Clause                                     */
 /*****************************************************************************/
 /* Version: GCC for ARM Embedded Processors                                  */
@@ -120,8 +120,8 @@ Reset_Handler:
     str     r1, [r0]
     ldr     r2, [r1]
     msr     msp, r2
-    ldr     R0, =Image$$ARM_LIB_STACK$$ZI$$Base
-    msr     msplim, R0
+    ldr     r0, =Image$$ARM_LIB_STACK$$ZI$$Base
+    msr     msplim, r0
     ldr     r0,=SystemInit
     blx     r0
     cpsie   i               /* Unmask interrupts */
