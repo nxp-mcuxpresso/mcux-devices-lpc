@@ -129,7 +129,9 @@ typedef enum IRQn {
 #include "core_cm0plus.h"              /* Core Peripheral Access Layer */
 #include "system_LPC832.h"             /* Device specific configuration file */
 
+#ifndef LPC832_SERIES
 #define LPC832_SERIES
+#endif
 /* CPU specific feature definitions */
 #include "LPC832_features.h"
 
@@ -411,4 +413,3 @@ typedef enum IRQn {
 
 
 #endif  /* LPC832_COMMON_H_ */
-

@@ -172,7 +172,9 @@ typedef enum IRQn {
  */ /* end of group Cortex_Core_Configuration */
 
 
+#ifndef LPC55S14_SERIES
 #define LPC55S14_SERIES
+#endif
 /* CPU specific feature definitions */
 #include "LPC55S14_features.h"
 
@@ -2225,4 +2227,3 @@ typedef enum IRQn {
 
 
 #endif  /* LPC55S14_COMMON_H_ */
-

@@ -173,7 +173,9 @@ typedef enum IRQn {
  */ /* end of group Cortex_Core_Configuration */
 
 
+#ifndef LPC54605_SERIES
 #define LPC54605_SERIES
+#endif
 /* CPU specific feature definitions */
 #include "LPC54605_features.h"
 
@@ -848,4 +850,3 @@ typedef struct {
 
 
 #endif  /* LPC54605_COMMON_H_ */
-

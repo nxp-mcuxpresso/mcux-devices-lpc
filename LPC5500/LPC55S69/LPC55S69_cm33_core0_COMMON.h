@@ -172,7 +172,9 @@ typedef enum IRQn {
  */ /* end of group Cortex_Core_Configuration */
 
 
+#ifndef LPC55S69_cm33_core0_SERIES
 #define LPC55S69_cm33_core0_SERIES
+#endif
 /* CPU specific feature definitions */
 #include "LPC55S69_cm33_core0_features.h"
 
@@ -2167,4 +2169,3 @@ typedef enum IRQn {
 
 
 #endif  /* LPC55S69_CM33_CORE0_COMMON_H_ */
-
