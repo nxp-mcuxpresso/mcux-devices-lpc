@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
 **     Version:             rev. 1.1, 2021-08-04
-**     Build:               b250415
+**     Build:               b250427
 **
 **     Abstract:
 **         Chip specific module features.
@@ -726,6 +726,10 @@
 #define FSL_FEATURE_SYSCON_FLASH_SECTOR_SIZE_BYTES (32768)
 /* @brief Flash size in bytes */
 #define FSL_FEATURE_SYSCON_FLASH_SIZE_BYTES (251904)
+/* @brief Has parity miss (bitfield LPCAC_CTRL[PARITY_MISS_EN]). */
+#define FSL_FEATURE_SYSCON_HAS_LPCAC_CTRL_PARITY_MISS_EN_BIT (1)
+/* @brief Has parity error report (bitfield LPCAC_CTRL[PARITY_FAULT_EN]). */
+#define FSL_FEATURE_SYSCON_HAS_LPCAC_CTRL_PARITY_FAULT_EN_BIT (0)
 
 /* SYSCTL module features */
 
