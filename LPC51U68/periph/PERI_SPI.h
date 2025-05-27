@@ -3,8 +3,8 @@
 **     Processors:          LPC51U68JBD48
 **                          LPC51U68JBD64
 **
-**     Version:             rev. 1.0, 2017-12-15
-**     Build:               b250321
+**     Version:             rev. 2.0, 2024-10-29
+**     Build:               b250521
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for SPI
@@ -19,21 +19,24 @@
 **     Revisions:
 **     - rev. 1.0 (2017-12-15)
 **         Initial version.
+**     - rev. 2.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
- * @file SPI.h
- * @version 1.0
- * @date 2017-12-15
+ * @file PERI_SPI.h
+ * @version 2.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for SPI
  *
  * CMSIS Peripheral Access Layer for SPI
  */
 
-#if !defined(SPI_H_)
-#define SPI_H_                                   /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_SPI_H_)
+#define PERI_SPI_H_                              /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_LPC51U68JBD48) || defined(CPU_LPC51U68JBD64))
 #include "LPC51U68_COMMON.h"
@@ -882,5 +885,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* SPI_H_ */
+#endif  /* PERI_SPI_H_ */
 

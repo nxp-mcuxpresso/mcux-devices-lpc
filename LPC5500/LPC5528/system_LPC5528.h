@@ -11,8 +11,8 @@
 **                          MCUXpresso Compiler
 **
 **     Reference manual:    LPC55S6x/LPC55S2x/LPC552x User manual(UM11126) Rev.1.3  16 May 2019
-**     Version:             rev. 1.1, 2019-05-16
-**     Build:               b250321
+**     Version:             rev. 2.0, 2024-10-29
+**     Build:               b250520
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -31,14 +31,17 @@
 **         Initial version based on v0.2UM
 **     - rev. 1.1 (2019-05-16)
 **         Initial A1 version based on v1.3UM
+**     - rev. 2.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file LPC5528
- * @version 1.1
- * @date 2019-05-16
+ * @version 2.0
+ * @date 2024-10-29
  * @brief Device specific configuration file for LPC5528 (header file)
  *
  * Provides a system configuration function and a global variable that contains

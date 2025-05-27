@@ -9,8 +9,8 @@
 **                          MCUXpresso Compiler
 **
 **     Reference manual:    LPC51U68 User manual User manual Rev. 1.0 13 Dec 2017
-**     Version:             rev. 1.0, 2017-12-15
-**     Build:               b250321
+**     Version:             rev. 2.0, 2024-10-29
+**     Build:               b250521
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPC51U68
@@ -25,14 +25,17 @@
 **     Revisions:
 **     - rev. 1.0 (2017-12-15)
 **         Initial version.
+**     - rev. 2.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file LPC51U68_COMMON.h
- * @version 1.0
- * @date 2017-12-15
+ * @version 2.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for LPC51U68
  *
  * CMSIS Peripheral Access Layer for LPC51U68
@@ -43,7 +46,7 @@
 
 /** Memory map major version (memory maps with equal major version number are
  * compatible) */
-#define MCU_MEM_MAP_VERSION 0x0100U
+#define MCU_MEM_MAP_VERSION 0x0200U
 /** Memory map minor version */
 #define MCU_MEM_MAP_VERSION_MINOR 0x0000U
 
@@ -586,3 +589,4 @@ typedef enum IRQn {
 
 
 #endif  /* LPC51U68_COMMON_H_ */
+

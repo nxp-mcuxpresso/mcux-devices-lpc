@@ -10,8 +10,8 @@
 **                          MCUXpresso Compiler
 **
 **     Reference manual:    LPC86x User manual Rev.1  March 2022
-**     Version:             rev. 1.0, 2022-03-15
-**     Build:               b250206
+**     Version:             rev. 2.0, 2024-10-29
+**     Build:               b250520
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPC865
@@ -28,14 +28,17 @@
 **         Initial version.
 **     - rev. 1.0 (2022-03-15)
 **         Revesion of Rev. 1.
+**     - rev. 2.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file LPC865.h
- * @version 1.0
- * @date 2022-03-15
+ * @version 2.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for LPC865
  *
  * CMSIS Peripheral Access Layer for LPC865

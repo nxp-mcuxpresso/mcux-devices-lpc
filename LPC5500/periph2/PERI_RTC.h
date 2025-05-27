@@ -17,8 +17,8 @@
 **                          LPC55S16JEV59
 **                          LPC55S16JEV98
 **
-**     Version:             rev. 1.1, 2019-12-03
-**     Build:               b250321
+**     Version:             rev. 2.0, 2024-10-29
+**     Build:               b250520
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for RTC
@@ -35,21 +35,24 @@
 **         Initial version based on v0.2UM
 **     - rev. 1.1 (2019-12-03)
 **         Initial version based on v0.6UM
+**     - rev. 2.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
- * @file RTC.h
- * @version 1.1
- * @date 2019-12-03
+ * @file PERI_RTC.h
+ * @version 2.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for RTC
  *
  * CMSIS Peripheral Access Layer for RTC
  */
 
-#if !defined(RTC_H_)
-#define RTC_H_                                   /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_RTC_H_)
+#define PERI_RTC_H_                              /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_LPC5512JBD100) || defined(CPU_LPC5512JBD64))
 #include "LPC5512_COMMON.h"
@@ -319,5 +322,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* RTC_H_ */
+#endif  /* PERI_RTC_H_ */
 

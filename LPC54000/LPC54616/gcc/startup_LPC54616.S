@@ -2,9 +2,9 @@
 /*  @file:    startup_LPC54616.s                                             */
 /*  @purpose: CMSIS Cortex-M4 Core Device Startup File                       */
 /*            LPC54616                                                       */
-/*  @version: 1.2                                                            */
-/*  @date:    2017-6-8                                                       */
-/*  @build:   b250321                                                        */
+/*  @version: 2.0                                                            */
+/*  @date:    2024-10-29                                                     */
+/*  @build:   b250521                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */

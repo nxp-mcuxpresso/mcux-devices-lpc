@@ -7,8 +7,8 @@
 **                          LPC865M201JHI33
 **                          LPC865M201JHI48
 **
-**     Version:             rev. 1.0, 2022-03-15
-**     Build:               b250206
+**     Version:             rev. 2.0, 2024-10-29
+**     Build:               b250520
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ACOMP
@@ -25,21 +25,24 @@
 **         Initial version.
 **     - rev. 1.0 (2022-03-15)
 **         Revesion of Rev. 1.
+**     - rev. 2.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
- * @file ACOMP.h
- * @version 1.0
- * @date 2022-03-15
+ * @file PERI_ACOMP.h
+ * @version 2.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for ACOMP
  *
  * CMSIS Peripheral Access Layer for ACOMP
  */
 
-#if !defined(ACOMP_H_)
-#define ACOMP_H_                                 /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_ACOMP_H_)
+#define PERI_ACOMP_H_                            /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_LPC864M201JBD64) || defined(CPU_LPC864M201JHI33) || defined(CPU_LPC864M201JHI48))
 #include "LPC864_COMMON.h"
@@ -244,5 +247,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* ACOMP_H_ */
+#endif  /* PERI_ACOMP_H_ */
 

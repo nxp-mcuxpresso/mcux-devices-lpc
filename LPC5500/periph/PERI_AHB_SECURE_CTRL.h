@@ -29,8 +29,8 @@
 **                          LPC55S69JEV98_cm33_core0
 **                          LPC55S69JEV98_cm33_core1
 **
-**     Version:             rev. 1.1, 2019-05-16
-**     Build:               b250321
+**     Version:             rev. 2.0, 2024-10-29
+**     Build:               b250520
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for AHB_SECURE_CTRL
@@ -47,21 +47,24 @@
 **         Initial version based on v0.2UM
 **     - rev. 1.1 (2019-05-16)
 **         Initial A1 version based on v1.3UM
+**     - rev. 2.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
- * @file AHB_SECURE_CTRL.h
- * @version 1.1
- * @date 2019-05-16
+ * @file PERI_AHB_SECURE_CTRL.h
+ * @version 2.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for AHB_SECURE_CTRL
  *
  * CMSIS Peripheral Access Layer for AHB_SECURE_CTRL
  */
 
-#if !defined(AHB_SECURE_CTRL_H_)
-#define AHB_SECURE_CTRL_H_                       /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_AHB_SECURE_CTRL_H_)
+#define PERI_AHB_SECURE_CTRL_H_                  /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_LPC5526JBD100) || defined(CPU_LPC5526JBD64) || defined(CPU_LPC5526JEV98))
 #include "LPC5526_COMMON.h"
@@ -3465,5 +3468,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* AHB_SECURE_CTRL_H_ */
+#endif  /* PERI_AHB_SECURE_CTRL_H_ */
 

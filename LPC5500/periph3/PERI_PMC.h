@@ -14,8 +14,8 @@
 **                          LPC55S06JBD64
 **                          LPC55S06JHI48
 **
-**     Version:             rev. 1.0, 2020-04-09
-**     Build:               b250321
+**     Version:             rev. 2.0, 2024-10-29
+**     Build:               b250520
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for PMC
@@ -30,21 +30,24 @@
 **     Revisions:
 **     - rev. 1.0 (2020-04-09)
 **         Initial version based on Niobe4mini
+**     - rev. 2.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
- * @file PMC.h
- * @version 1.0
- * @date 2020-04-09
+ * @file PERI_PMC.h
+ * @version 2.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for PMC
  *
  * CMSIS Peripheral Access Layer for PMC
  */
 
-#if !defined(PMC_H_)
-#define PMC_H_                                   /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_PMC_H_)
+#define PERI_PMC_H_                              /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_LPC5502JBD64) || defined(CPU_LPC5502JHI48))
 #include "LPC5502_COMMON.h"
@@ -959,5 +962,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* PMC_H_ */
+#endif  /* PERI_PMC_H_ */
 

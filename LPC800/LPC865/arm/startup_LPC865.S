@@ -2,9 +2,9 @@
 /*  @file:    startup_LPC865.s                                               */
 /*  @purpose: CMSIS Cortex-M0P Core Device Startup File                      */
 /*            LPC865                                                         */
-/*  @version: 1.0                                                            */
-/*  @date:    2022-3-15                                                      */
-/*  @build:   b250206                                                        */
+/*  @version: 2.0                                                            */
+/*  @date:    2024-10-29                                                     */
+/*  @build:   b250520                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */

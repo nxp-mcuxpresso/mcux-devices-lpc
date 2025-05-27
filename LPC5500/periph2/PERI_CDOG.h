@@ -17,8 +17,8 @@
 **                          LPC55S16JEV59
 **                          LPC55S16JEV98
 **
-**     Version:             rev. 1.1, 2019-12-03
-**     Build:               b250321
+**     Version:             rev. 2.0, 2024-10-29
+**     Build:               b250520
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for CDOG
@@ -35,21 +35,24 @@
 **         Initial version based on v0.2UM
 **     - rev. 1.1 (2019-12-03)
 **         Initial version based on v0.6UM
+**     - rev. 2.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
- * @file CDOG.h
- * @version 1.1
- * @date 2019-12-03
+ * @file PERI_CDOG.h
+ * @version 2.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for CDOG
  *
  * CMSIS Peripheral Access Layer for CDOG
  */
 
-#if !defined(CDOG_H_)
-#define CDOG_H_                                  /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_CDOG_H_)
+#define PERI_CDOG_H_                             /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_LPC5512JBD100) || defined(CPU_LPC5512JBD64))
 #include "LPC5512_COMMON.h"
@@ -450,5 +453,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* CDOG_H_ */
+#endif  /* PERI_CDOG_H_ */
 
