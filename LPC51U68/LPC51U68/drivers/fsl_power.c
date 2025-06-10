@@ -259,7 +259,7 @@ static void DeepSleepReloc(uint32_t peripheral_ctrl)
 
     /* Set PDRUNCFG[1] bits 29, 28 */
     pdSet = &(SYSCON->PDRUNCFGSET[0]);
-    ((volatile uint32_t *)pdSet)[1] = (3U << 28U);
+    *((volatile uint32_t *)pdSet + 1U) = (3U << 28U);
 
     /* Fix KPSDK-17275 */
     SYSCON->PRESETCTRLSET[0] = SYSCON_PRESETCTRL_FLASH_RST_MASK;
@@ -276,7 +276,7 @@ static void DeepSleepReloc(uint32_t peripheral_ctrl)
 
     /* When exiting only clear bit 29 of PDRUNCFG[1] */
     pdClr = &(SYSCON->PDRUNCFGCLR[0]);
-    ((volatile uint32_t *)pdClr)[1] = (1U << 29U);
+    *((volatile uint32_t *)pdClr + 1U) = (1U << 29U);
 
     /* Restore original pdruncfg */
     SYSCON->PDRUNCFG[0] = pdruncfg_val & ~(1U << 3U);
