@@ -4,7 +4,7 @@
 /*            LPC55S69_cm33_core1                                            */
 /*  @version: 2.0                                                            */
 /*  @date:    2024-10-29                                                     */
-/*  @build:   b250520                                                        */
+/*  @build:   b250529                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */
@@ -111,16 +111,15 @@ __Vectors:
     .align 2
     .weak    Reset_Handler
     .type    Reset_Handler, %function
-
 Reset_Handler:
-    cpsid   i               /* mask interrupts */
-    ldr   r0, =Image$$ARM_LIB_STACK$$ZI$$Base
-    msr   msplim, r0
-    ldr   r0,=SystemInit
-    blx   r0
+    cpsid   i               /* Mask interrupts */
+    ldr     r0, =Image$$ARM_LIB_STACK$$ZI$$Base
+    msr     msplim, r0
+    ldr     r0,=SystemInit
+    blx     r0
     cpsie   i               /* Unmask interrupts */
-    ldr   r0,=__main
-    bx    r0
+    ldr     r0,=__main
+    bx      r0
 
     .pool
     .size Reset_Handler, . - Reset_Handler
