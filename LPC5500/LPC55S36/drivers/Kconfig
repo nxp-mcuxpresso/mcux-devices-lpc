@@ -30,6 +30,10 @@ menu "Device specific drivers configuration"
 
      config MCUX_COMPONENT_driver.romapi
           bool "Use romapi flash"
+          select MCUX_COMPONENT_driver.romapi_flash
+          select MCUX_COMPONENT_driver.romapi_mem_interface
+          select MCUX_COMPONENT_driver.romapi_nboot
+          select MCUX_COMPONENT_driver.romapi_runbootloader
           depends on MCUX_HAS_COMPONENT_driver.romapi
 
      config MCUX_COMPONENT_driver.romapi_flash
