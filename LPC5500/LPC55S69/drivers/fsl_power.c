@@ -395,29 +395,18 @@ static void POWER_EnterLowPower(LPC_LOWPOWER_T *p_lowpower_cfg)
                      (~PMC_MISCCTRL_LDOMEMHIGHZMODE_MASK);
 }
 
-/**
- * @brief
- * @param
- * @return
- */
-static bool int32_MultiplyOverflow(int32_t a, int32_t b) {
-    if (a == 0 || b == 0) return false;
-    if (a > 0 && b > 0) return a > INT32_MAX / b;
-    if (a < 0 && b < 0) return a < INT32_MAX / b;
-    return a < INT32_MIN / b || b < INT32_MIN / a;
-}
+#define INT32_MULTIPLY_OVERFLOW(a, b) ( \
+    ((a) == 0 || (b) == 0) ? false : \
+    (((a) > 0) ? \
+        (((b) > 0) ? ((a) > INT32_MAX / (b)) : ((b) < INT32_MIN / (a))) : \
+        (((b) > 0) ? ((a) < INT32_MIN / (b)) : ((a) < INT32_MAX / (b))) \
+    ) \
+)
 
-/**
- * @brief
- * @param
- * @return
- */
-static bool int32_AddOverflow(int32_t a, int32_t b) {
-    if ((b > 0) && (a > INT32_MAX - b)) return true;
-    if ((b < 0) && (a < INT32_MIN - b)) return true;
-    return false;
-}
-
+#define INT32_ADD_OVERFLOW(a, b) ( \
+    (((b) > 0) && ((a) > INT32_MAX - (b))) || \
+    (((b) < 0) && ((a) < INT32_MIN - (b))) \
+)
 
 /**
  * @brief   Shut off the Flash and execute the _WFI(), then power up the Flash after wake-up event
@@ -1565,14 +1554,14 @@ void POWER_Xtal16mhzCapabankTrim(int32_t pi32_16MfXtalIecLoadpF_x100,
     iXOCapOutpF_x100 = (int32_t)i64Tmp;
 
     /* In & out XO_OSC_CAP_Code_CTRL calculation, with rounding */
-    assert(!int32_MultiplyOverflow(iXOCapInpF_x100, iaXin_x4));
-    assert(!int32_AddOverflow(iXOCapInpF_x100 * iaXin_x4, ibXin * 400));
+    assert(INT32_MULTIPLY_OVERFLOW(iXOCapInpF_x100, iaXin_x4));
+    assert(!INT32_ADD_OVERFLOW(iXOCapInpF_x100 * iaXin_x4, ibXin * 400));
     i32Tmp         = ((iXOCapInpF_x100 * iaXin_x4 + ibXin * 400) + 200) / 400;
     assert((i32Tmp >= 0) && (i32Tmp <= UINT8_MAX));
     u8XOCapInCtrl  = (uint8_t)i32Tmp;
 
-    assert(!int32_MultiplyOverflow(iXOCapOutpF_x100, iaXout_x4));
-    assert(!int32_AddOverflow(iXOCapOutpF_x100 * iaXout_x4, ibXout * 400));
+    assert(!INT32_MULTIPLY_OVERFLOW(iXOCapOutpF_x100, iaXout_x4));
+    assert(!INT32_ADD_OVERFLOW(iXOCapOutpF_x100 * iaXout_x4, ibXout * 400));
     i32Tmp         = ((iXOCapOutpF_x100 * iaXout_x4 + ibXout * 400) + 200) / 400;
     assert((i32Tmp >= 0) && (i32Tmp <= UINT8_MAX));
     u8XOCapOutCtrl = (uint8_t)i32Tmp;
@@ -1638,14 +1627,14 @@ void POWER_Xtal32khzCapabankTrim(int32_t pi32_32kfXtalIecLoadpF_x100,
     iXOCapOutpF_x100 = (int32_t)i64Tmp;
 
     /* In & out XO_OSC_CAP_Code_CTRL calculation, with rounding */
-    assert(!int32_MultiplyOverflow(iXOCapInpF_x100, iaXin_x4));
-    assert(!int32_AddOverflow(iXOCapInpF_x100 * iaXin_x4, ibXin * 400));
+    assert(!INT32_MULTIPLY_OVERFLOW(iXOCapInpF_x100, iaXin_x4));
+    assert(!INT32_ADD_OVERFLOW(iXOCapInpF_x100 * iaXin_x4, ibXin * 400));
     i32Tmp         = ((iXOCapInpF_x100 * iaXin_x4 + ibXin * 400) + 200) / 400;
     assert((i32Tmp >= 0) && (i32Tmp <= UINT8_MAX));
     u8XOCapInCtrl  = (uint8_t)i32Tmp;
 
-    assert(!int32_MultiplyOverflow(iXOCapOutpF_x100, iaXout_x4));
-    assert(!int32_AddOverflow(iXOCapOutpF_x100 * iaXout_x4, ibXout * 400));
+    assert(!INT32_MULTIPLY_OVERFLOW(iXOCapOutpF_x100, iaXout_x4));
+    assert(!INT32_ADD_OVERFLOW(iXOCapOutpF_x100 * iaXout_x4, ibXout * 400));
     i32Tmp         = ((iXOCapOutpF_x100 * iaXout_x4 + ibXout * 400) + 200) / 400;
     assert((i32Tmp >= 0) && (i32Tmp <= UINT8_MAX));
     u8XOCapOutCtrl = (uint8_t)i32Tmp;

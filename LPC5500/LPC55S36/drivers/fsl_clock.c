@@ -63,6 +63,21 @@
 
 #define XO_SLAVE_EN (1)
 
+/* int32 multiplication overflow judgment */
+#define INT32_MULTIPLY_OVERFLOW(a, b) ( \
+    ((a) == 0 || (b) == 0) ? false : \
+    (((a) > 0) ? \
+        (((b) > 0) ? ((a) > INT32_MAX / (b)) : ((b) < INT32_MIN / (a))) : \
+        (((b) > 0) ? ((a) < INT32_MIN / (b)) : ((a) < INT32_MAX / (b))) \
+    ) \
+)
+
+/* int32 addition overflow judgment */
+#define INT32_ADD_OVERFLOW(a, b) ( \
+    (((b) > 0) && ((a) > INT32_MAX - (b))) || \
+    (((b) < 0) && ((a) < INT32_MIN - (b))) \
+)
+
 /* Saved value of PLL output rate, computed whenever needed to save run-time
    computation on each call to retrive the PLL rate. */
 static uint32_t s_Pll0_Freq;
@@ -107,9 +122,6 @@ static void CLOCK_GetPLL1OutFromSetupUpdate(pll_setup_t *pSetup);
 static uint8_t CLOCK_u8OscCapConvert(uint8_t u8OscCap, uint8_t u8CapBankDiscontinuity);
 /* Enables and sets LDO for High Frequency crystal oscillator */
 static void CLOCK_SetXtalHfLdo(void);
-
-static bool int32_MultiplyOverflow(int32_t a, int32_t b);
-static bool int32_AddOverflow(int32_t a, int32_t b);
 
 /*******************************************************************************
  * Code
@@ -2356,14 +2368,14 @@ void CLOCK_XtalHfCapabankTrim(int32_t pi32_hfXtalIecLoadpF_x100,
     iXOCapOutpF_x100 = (int32_t)i64Tmp;
 
     /* In & out XO_OSC_CAP_Code_CTRL calculation, with rounding */
-    assert(!int32_MultiplyOverflow(iXOCapInpF_x100, iaXin_x4));
-    assert(!int32_AddOverflow(iXOCapInpF_x100 * iaXin_x4, ibXin * 400));
+    assert(!INT32_MULTIPLY_OVERFLOW(iXOCapInpF_x100, iaXin_x4));
+    assert(!INT32_ADD_OVERFLOW(iXOCapInpF_x100 * iaXin_x4, ibXin * 400));
     i32Tmp         = ((iXOCapInpF_x100 * iaXin_x4 + ibXin * 400) + 200) / 400;
     assert((i32Tmp >= 0) && (i32Tmp <= UINT8_MAX));
     u8XOCapInCtrl  = (uint8_t)i32Tmp;
 
-    assert(!int32_MultiplyOverflow(iXOCapOutpF_x100, iaXout_x4));
-    assert(!int32_AddOverflow(iXOCapOutpF_x100 * iaXout_x4, ibXout * 400));
+    assert(!INT32_MULTIPLY_OVERFLOW(iXOCapOutpF_x100, iaXout_x4));
+    assert(!INT32_ADD_OVERFLOW(iXOCapOutpF_x100 * iaXout_x4, ibXout * 400));
     i32Tmp         = ((iXOCapOutpF_x100 * iaXout_x4 + ibXout * 400) + 200) / 400;
     assert((i32Tmp >= 0) && (i32Tmp <= UINT8_MAX));
     u8XOCapOutCtrl = (uint8_t)i32Tmp;
@@ -2440,14 +2452,14 @@ void CLOCK_Xtal32khzCapabankTrim(int32_t pi32_32kfXtalIecLoadpF_x100,
     iXOCapOutpF_x100 = (int32_t)i64Tmp;
 
     /* In & out XO_OSC_CAP_Code_CTRL calculation, with rounding */
-    assert(!int32_MultiplyOverflow(iXOCapInpF_x100, iaXin_x4));
-    assert(!int32_AddOverflow(iXOCapInpF_x100 * iaXin_x4, ibXin * 400));
+    assert(!INT32_MULTIPLY_OVERFLOW(iXOCapInpF_x100, iaXin_x4));
+    assert(!INT32_ADD_OVERFLOW(iXOCapInpF_x100 * iaXin_x4, ibXin * 400));
     i32Tmp         = ((iXOCapInpF_x100 * iaXin_x4 + ibXin * 400) + 200) / 400;
     assert((i32Tmp >= 0) && (i32Tmp <= UINT8_MAX));
     u8XOCapInCtrl  = (uint8_t)i32Tmp;
 
-    assert(!int32_MultiplyOverflow(iXOCapOutpF_x100, iaXout_x4));
-    assert(!int32_AddOverflow(iXOCapOutpF_x100 * iaXout_x4, ibXout * 400));
+    assert(!INT32_MULTIPLY_OVERFLOW(iXOCapOutpF_x100, iaXout_x4));
+    assert(!INT32_ADD_OVERFLOW(iXOCapOutpF_x100 * iaXout_x4, ibXout * 400));
     i32Tmp         = ((iXOCapOutpF_x100 * iaXout_x4 + ibXout * 400) + 200) / 400;
     assert((i32Tmp >= 0) && (i32Tmp <= UINT8_MAX));
     u8XOCapOutCtrl = (uint8_t)i32Tmp;
@@ -2549,23 +2561,4 @@ void CLOCK_FroHfTrim(void)
     Fro192mCtrlEfuse                       = ANACTRL->FRO192M_CTRL;
     ANACTRL->ANALOG_CTRL_CFG               = ANACTRL->ANALOG_CTRL_CFG | ANACTRL_ANALOG_CTRL_CFG_FRO192M_TRIM_SRC_MASK;
     ANACTRL->FRO192M_CTRL                  = ANACTRL_FRO192M_CTRL_WRTRIM_MASK | Fro192mCtrlEfuse;
-}
-
-/*!
- * brief  int32 multiplication overflow judgment.
- */
-static bool int32_MultiplyOverflow(int32_t a, int32_t b) {
-    if (a == 0 || b == 0) return false;
-    if (a > 0 && b > 0) return a > INT32_MAX / b;
-    if (a < 0 && b < 0) return a < INT32_MAX / b;
-    return a < INT32_MIN / b || b < INT32_MIN / a;
-}
-
-/*!
- * brief  int32 addition overflow judgment.
- */
-static bool int32_AddOverflow(int32_t a, int32_t b) {
-    if ((b > 0) && (a > INT32_MAX - b)) return true;
-    if ((b < 0) && (a < INT32_MIN - b)) return true;
-    return false;
 }
