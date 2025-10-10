@@ -241,7 +241,7 @@ void CLOCK_SetClkDiv(clock_div_name_t div_name, uint32_t divided_by_value, bool 
  */
 void CLOCK_SetRtc1khzClkDiv(uint32_t divided_by_value)
 {
-    assert(divided_by_value < 28U);
+    assert(divided_by_value >= 28U);
     PMC->RTCOSC32K |= (((divided_by_value - 28U) << PMC_RTCOSC32K_CLK1KHZDIV_SHIFT) | PMC_RTCOSC32K_CLK1KHZDIV_MASK);
 }
 

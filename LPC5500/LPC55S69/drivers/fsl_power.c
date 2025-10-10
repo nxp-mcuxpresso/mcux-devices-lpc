@@ -297,6 +297,19 @@ typedef enum _v_ao
 #define CPU_RETENTION_RAMX_STORAGE_START_ADDR (0x04006000)
 
 #define XO_SLAVE_EN (1)
+
+#define INT32_MULTIPLY_OVERFLOW(a, b) ( \
+    ((a) == 0 || (b) == 0) ? false : \
+    (((a) > 0) ? \
+        (((b) > 0) ? ((a) > INT32_MAX / (b)) : ((b) < INT32_MIN / (a))) : \
+        (((b) > 0) ? ((a) < INT32_MIN / (b)) : ((a) < INT32_MAX / (b))) \
+    ) \
+)
+
+#define INT32_ADD_OVERFLOW(a, b) ( \
+    (((b) > 0) && ((a) > INT32_MAX - (b))) || \
+    (((b) < 0) && ((a) < INT32_MIN - (b))) \
+)
 /*******************************************************************************
  * Codes
  ******************************************************************************/
@@ -394,19 +407,6 @@ static void POWER_EnterLowPower(LPC_LOWPOWER_T *p_lowpower_cfg)
     PMC->MISCCTRL &= (~PMC_MISCCTRL_LOWPWR_FLASH_BUF_MASK) & (~PMC_MISCCTRL_DISABLE_BLEED_MASK) &
                      (~PMC_MISCCTRL_LDOMEMHIGHZMODE_MASK);
 }
-
-#define INT32_MULTIPLY_OVERFLOW(a, b) ( \
-    ((a) == 0 || (b) == 0) ? false : \
-    (((a) > 0) ? \
-        (((b) > 0) ? ((a) > INT32_MAX / (b)) : ((b) < INT32_MIN / (a))) : \
-        (((b) > 0) ? ((a) < INT32_MIN / (b)) : ((a) < INT32_MAX / (b))) \
-    ) \
-)
-
-#define INT32_ADD_OVERFLOW(a, b) ( \
-    (((b) > 0) && ((a) > INT32_MAX - (b))) || \
-    (((b) < 0) && ((a) < INT32_MIN - (b))) \
-)
 
 /**
  * @brief   Shut off the Flash and execute the _WFI(), then power up the Flash after wake-up event
