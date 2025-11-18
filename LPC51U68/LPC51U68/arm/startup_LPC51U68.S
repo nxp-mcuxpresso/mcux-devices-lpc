@@ -2,9 +2,9 @@
 /*  @file:    startup_LPC51U68.s                                             */
 /*  @purpose: CMSIS Cortex-M0P Core Device Startup File                      */
 /*            LPC51U68                                                       */
-/*  @version: 2.0                                                            */
-/*  @date:    2024-10-29                                                     */
-/*  @build:   b250521                                                        */
+/*  @version: 3.0                                                            */
+/*  @date:    2025-11-18                                                     */
+/*  @build:   b251118                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */
