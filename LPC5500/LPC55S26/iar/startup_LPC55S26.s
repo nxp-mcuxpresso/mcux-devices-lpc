@@ -4,11 +4,11 @@
 ;            LPC55S26
 ;  @version: 2.0
 ;  @date:    2024-10-29
-;  @build:   b250529
+;  @build:   b260209
 ; -------------------------------------------------------------------------
 ;
 ; Copyright 1997-2016 Freescale Semiconductor, Inc.
-; Copyright 2016-2025 NXP
+; Copyright 2016-2026 NXP
 ; SPDX-License-Identifier: BSD-3-Clause
 ;
 ; The modules in this file are included in the libraries, and may be replaced
@@ -124,7 +124,7 @@ __vector_table_0x1c
         DCD     HASHCRYPT_IRQHandler                          ;HASHCRYPT interrupt
         DCD     CASER_IRQHandler                              ;CASPER interrupt
         DCD     PUF_IRQHandler                                ;PUF interrupt
-        DCD     PQ_IRQHandler                                 ;PQ interrupt
+        DCD     Reserved73_IRQHandler                         ;Reserved interrupt
         DCD     DMA1_IRQHandler                               ;DMA1 interrupt
         DCD     FLEXCOMM8_IRQHandler                          ;Flexcomm Interface 8 (SPI, , FLEXCOMM)
 __Vectors_End
@@ -605,11 +605,11 @@ PUF_IRQHandler
         LDR     R0, =PUF_DriverIRQHandler
         BX      R0
 
-        PUBWEAK PQ_IRQHandler
-        PUBWEAK PQ_DriverIRQHandler
+        PUBWEAK Reserved73_IRQHandler
+        PUBWEAK Reserved73_DriverIRQHandler
         SECTION .text:CODE:REORDER:NOROOT(2)
-PQ_IRQHandler
-        LDR     R0, =PQ_DriverIRQHandler
+Reserved73_IRQHandler
+        LDR     R0, =Reserved73_DriverIRQHandler
         BX      R0
 
         PUBWEAK DMA1_IRQHandler
@@ -683,7 +683,7 @@ SEC_VIO_DriverIRQHandler
 HASHCRYPT_DriverIRQHandler
 CASER_DriverIRQHandler
 PUF_DriverIRQHandler
-PQ_DriverIRQHandler
+Reserved73_DriverIRQHandler
 DMA1_DriverIRQHandler
 FLEXCOMM8_DriverIRQHandler
 DefaultISR

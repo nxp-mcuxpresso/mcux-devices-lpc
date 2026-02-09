@@ -4,11 +4,11 @@
 /*            LPC55S26                                                       */
 /*  @version: 2.0                                                            */
 /*  @date:    2024-10-29                                                     */
-/*  @build:   b250529                                                        */
+/*  @build:   b260209                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */
-/* Copyright 2016-2025 NXP                                                   */
+/* Copyright 2016-2026 NXP                                                   */
 /* SPDX-License-Identifier: BSD-3-Clause                                     */
 /*****************************************************************************/
 /* Version: GCC for ARM Embedded Processors                                  */
@@ -95,7 +95,7 @@ __Vectors:
     .long   HASHCRYPT_IRQHandler                            /* HASHCRYPT interrupt*/
     .long   CASER_IRQHandler                                /* CASPER interrupt*/
     .long   PUF_IRQHandler                                  /* PUF interrupt*/
-    .long   PQ_IRQHandler                                   /* PQ interrupt*/
+    .long   Reserved73_IRQHandler                           /* Reserved interrupt*/
     .long   DMA1_IRQHandler                                 /* DMA1 interrupt*/
     .long   FLEXCOMM8_IRQHandler                            /* Flexcomm Interface 8 (SPI, , FLEXCOMM)*/
 
@@ -789,12 +789,12 @@ PUF_IRQHandler:
 
     .align 1
     .thumb_func
-    .weak PQ_IRQHandler
-    .type PQ_IRQHandler, %function
-PQ_IRQHandler:
-    ldr   r0,=PQ_DriverIRQHandler
+    .weak Reserved73_IRQHandler
+    .type Reserved73_IRQHandler, %function
+Reserved73_IRQHandler:
+    ldr   r0,=Reserved73_DriverIRQHandler
     bx    r0
-    .size PQ_IRQHandler, . - PQ_IRQHandler
+    .size Reserved73_IRQHandler, . - Reserved73_IRQHandler
 
     .align 1
     .thumb_func
@@ -885,7 +885,7 @@ FLEXCOMM8_IRQHandler:
     def_irq_handler    HASHCRYPT_DriverIRQHandler
     def_irq_handler    CASER_DriverIRQHandler
     def_irq_handler    PUF_DriverIRQHandler
-    def_irq_handler    PQ_DriverIRQHandler
+    def_irq_handler    Reserved73_DriverIRQHandler
     def_irq_handler    DMA1_DriverIRQHandler
     def_irq_handler    FLEXCOMM8_DriverIRQHandler
 

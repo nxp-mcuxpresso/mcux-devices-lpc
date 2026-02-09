@@ -4,11 +4,11 @@
 ;            LPC5528
 ;  @version: 2.0
 ;  @date:    2024-10-29
-;  @build:   b250529
+;  @build:   b260209
 ; -------------------------------------------------------------------------
 ;
 ; Copyright 1997-2016 Freescale Semiconductor, Inc.
-; Copyright 2016-2025 NXP
+; Copyright 2016-2026 NXP
 ; SPDX-License-Identifier: BSD-3-Clause
 ;
 ; The modules in this file are included in the libraries, and may be replaced
@@ -122,9 +122,9 @@ __vector_table_0x1c
         DCD     PLU_IRQHandler                                ;PLU interrupt
         DCD     SEC_VIO_IRQHandler                            ;SEC_VIO interrupt
         DCD     Reserved70_IRQHandler                         ;Reserved interrupt
-        DCD     CASER_IRQHandler                              ;CASPER interrupt
+        DCD     Reserved71_IRQHandler                         ;Reserved interrupt
         DCD     Reserved72_IRQHandler                         ;Reserved interrupt
-        DCD     PQ_IRQHandler                                 ;PQ interrupt
+        DCD     Reserved73_IRQHandler                         ;Reserved interrupt
         DCD     DMA1_IRQHandler                               ;DMA1 interrupt
         DCD     FLEXCOMM8_IRQHandler                          ;Flexcomm Interface 8 (SPI, , FLEXCOMM)
 __Vectors_End
@@ -591,11 +591,11 @@ Reserved70_IRQHandler
         LDR     R0, =Reserved70_DriverIRQHandler
         BX      R0
 
-        PUBWEAK CASER_IRQHandler
-        PUBWEAK CASER_DriverIRQHandler
+        PUBWEAK Reserved71_IRQHandler
+        PUBWEAK Reserved71_DriverIRQHandler
         SECTION .text:CODE:REORDER:NOROOT(2)
-CASER_IRQHandler
-        LDR     R0, =CASER_DriverIRQHandler
+Reserved71_IRQHandler
+        LDR     R0, =Reserved71_DriverIRQHandler
         BX      R0
 
         PUBWEAK Reserved72_IRQHandler
@@ -605,11 +605,11 @@ Reserved72_IRQHandler
         LDR     R0, =Reserved72_DriverIRQHandler
         BX      R0
 
-        PUBWEAK PQ_IRQHandler
-        PUBWEAK PQ_DriverIRQHandler
+        PUBWEAK Reserved73_IRQHandler
+        PUBWEAK Reserved73_DriverIRQHandler
         SECTION .text:CODE:REORDER:NOROOT(2)
-PQ_IRQHandler
-        LDR     R0, =PQ_DriverIRQHandler
+Reserved73_IRQHandler
+        LDR     R0, =Reserved73_DriverIRQHandler
         BX      R0
 
         PUBWEAK DMA1_IRQHandler
@@ -681,9 +681,9 @@ SEC_GPIO_INT0_IRQ1_DriverIRQHandler
 PLU_DriverIRQHandler
 SEC_VIO_DriverIRQHandler
 Reserved70_DriverIRQHandler
-CASER_DriverIRQHandler
+Reserved71_DriverIRQHandler
 Reserved72_DriverIRQHandler
-PQ_DriverIRQHandler
+Reserved73_DriverIRQHandler
 DMA1_DriverIRQHandler
 FLEXCOMM8_DriverIRQHandler
 DefaultISR
