@@ -85,7 +85,7 @@ static uint32_t Clock_GetPLLFreq(uint32_t PLLReg, uint32_t inputRate)
 {
     uint32_t m_val = ((PLLReg & 0x1FU) + 1U);
 
-    return (inputRate * m_val);
+    return (uint32_t)((uint64_t)inputRate * (uint64_t)m_val);
 }
 
 
