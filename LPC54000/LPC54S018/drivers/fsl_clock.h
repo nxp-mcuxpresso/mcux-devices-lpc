@@ -10,7 +10,6 @@
 #ifndef _FSL_CLOCK_H_
 #define _FSL_CLOCK_H_
 
-/* PRQA S 0883 */ /* PW.INCLUDE_RECURSION: circular include is guarded by _FSL_CLOCK_H_ -- reviewed and accepted */
 #include "fsl_common.h"
 
 /*! @addtogroup clock */
@@ -933,7 +932,7 @@ typedef enum _clock_div_name
 
     kCLOCK_DivEmcClk = 46, /*!< Emc Clock Divider. */
 
-    kCLOCK_DivSdioClk = 47 /*!< Sdio clock divider. */
+    kCLOCK_DivSdioClk = 47 /*!< Sdio clock Divider. */
 } clock_div_name_t;
 
 /*******************************************************************************

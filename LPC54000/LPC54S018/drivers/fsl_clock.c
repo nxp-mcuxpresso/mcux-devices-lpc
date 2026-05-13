@@ -2471,8 +2471,8 @@ pll_error_t CLOCK_SetUsbPLLFreq(const usb_pll_setup_t *pSetup)
     if (pllfbsel)
     {
         /*integer_mode: Fout = M*(Fin/N),  Fcco = 2*P*M*(Fin/N) */
-        fccoHz = (uint32_t)((((uint64_t)pSetup->inputRate / ((uint32_t)nsel + 1U)) * 2U *
-                             (msel + 1U) * SWITCH_USB_PSEL(psel)) & 0xFFFFFFFFU);
+        fccoHz = (uint32_t)((((uint64_t)pSetup->inputRate / ((uint64_t)nsel + 1ULL)) * 2ULL *
+                             ((uint64_t)msel + 1ULL) * (uint64_t)SWITCH_USB_PSEL(psel)) & 0xFFFFFFFFUL);
 
         /* USB PLL CCO out rate cannot be lower than this */
         if (fccoHz < USB_PLL_MIN_CCO_FREQ_MHZ)
@@ -2488,7 +2488,7 @@ pll_error_t CLOCK_SetUsbPLLFreq(const usb_pll_setup_t *pSetup)
     else
     {
         /* non integer_mode: Fout = M*(Fin/N)/(2*P), Fcco = M * (Fin/N) */
-        fccoHz = pSetup->inputRate / ((uint32_t)nsel + 1U) * (msel + 1U);
+        fccoHz = (uint32_t)(((uint64_t)pSetup->inputRate / ((uint64_t)nsel + 1ULL)) * ((uint64_t)msel + 1ULL));
 
         /* USB PLL CCO out rate cannot be lower than this */
         if (fccoHz < USB_PLL_MIN_CCO_FREQ_MHZ)
