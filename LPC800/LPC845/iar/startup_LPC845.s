@@ -4,11 +4,11 @@
 ;            LPC845
 ;  @version: 3.0
 ;  @date:    2025-11-18
-;  @build:   b251118
+;  @build:   b260515
 ; -------------------------------------------------------------------------
 ;
 ; Copyright 1997-2016 Freescale Semiconductor, Inc.
-; Copyright 2016-2025 NXP
+; Copyright 2016-2026 NXP
 ; SPDX-License-Identifier: BSD-3-Clause
 ;
 ; The modules in this file are included in the libraries, and may be replaced

@@ -6,13 +6,13 @@
 **     Compiler:            GNU C Compiler
 **     Reference manual:    LPC51U68 User manual User manual Rev. 1.0 13 Dec 2017
 **     Version:             rev. 1.1, 2025-11-07
-**     Build:               b251107
+**     Build:               b260515
 **
 **     Abstract:
 **         Linker file for the GNU C Compiler
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2025 NXP
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
