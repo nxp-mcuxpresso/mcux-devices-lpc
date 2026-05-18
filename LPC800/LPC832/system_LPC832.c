@@ -8,7 +8,7 @@
 **
 **     Reference manual:    LPC83x User manual Rev.1.1  5 October 2016
 **     Version:             rev. 3.0, 2025-11-18
-**     Build:               b260515
+**     Build:               b260518
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -82,8 +82,9 @@ static uint32_t CLOCK_GetSystemPLLInClkRate(void)
 static uint32_t Clock_GetPLLFreq(uint32_t PLLReg, uint32_t inputRate)
 {
     uint32_t m_val = ((PLLReg & 0x1FU) + 1U);
+    uint64_t freq  = (uint64_t)inputRate * (uint64_t)m_val;
 
-    return (uint32_t)((uint64_t)inputRate * (uint64_t)m_val);
+    return (freq > (uint64_t)UINT32_MAX) ? UINT32_MAX : (uint32_t)freq;
 }
 
 
