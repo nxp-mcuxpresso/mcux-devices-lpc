@@ -1534,6 +1534,9 @@ static pll_error_t CLOCK_GetPllConfigInternal(uint32_t finHz, uint32_t foutHz, p
 
     /* Find optimal values for filter */
     /* Will bumping up M by 1 get us closer to the desired CCO frequency? */
+    /* INT30-C: Prevent unsigned integer overflow */
+    assert((nDivOutHz == 0U) ||
+           ((((uint64_t)multFccoDiv * pllMultiplier * 2ULL) + 1ULL) <= (UINT64_MAX / (uint64_t)nDivOutHz)));
     if (((uint64_t)nDivOutHz * (((uint64_t)multFccoDiv * pllMultiplier * 2ULL) + 1ULL)) < ((uint64_t)fccoHz * 2ULL))
     {
         pllMultiplier++;
@@ -2473,8 +2476,12 @@ pll_error_t CLOCK_SetUsbPLLFreq(const usb_pll_setup_t *pSetup)
     if (pllfbsel)
     {
         /*integer_mode: Fout = M*(Fin/N),  Fcco = 2*P*M*(Fin/N) */
-        fccoHz = (uint32_t)((((uint64_t)pSetup->inputRate / (nsel + 1UL)) * 2UL * (msel + 1UL) *
-                             (1UL << (psel & 3UL))) & 0xFFFFFFFFU);
+        /* INT30-C: Prevent unsigned integer overflow */
+        assert(((uint64_t)pSetup->inputRate / (nsel + 1UL)) <=
+               (UINT64_MAX / ((uint64_t)(2U * (uint32_t)(msel + 1UL) * (1UL << (psel & 3UL))))));
+        fccoHz =
+            (uint32_t)((((uint64_t)pSetup->inputRate / (nsel + 1UL)) * 2UL * (msel + 1UL) * (1UL << (psel & 3UL))) &
+                       0xFFFFFFFFU);
 
         /* USB PLL CCO out rate cannot be lower than this */
         if (fccoHz < USB_PLL_MIN_CCO_FREQ_MHZ)
