@@ -12,7 +12,7 @@
 **
 **     Reference manual:    LPC84x User manual Rev.1.6  8 Dec 2017
 **     Version:             rev. 3.0, 2025-11-18
-**     Build:               b260817
+**     Build:               b260826
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -140,9 +140,6 @@ void SystemCoreClockUpdate (void) {
           break;
         case 3U:                                       /* Free running oscillator (FRO) / 2 */
           SystemCoreClock = (fro_osc >> 1U);
-          break;
-        default:
-          SystemCoreClock = 0U;
           break;
       }
       break;
