@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
 **     Version:             rev. 3.0, 2025-11-18
-**     Build:               b260717
+**     Build:               b260908
 **
 **     Abstract:
 **         Chip specific module features.
@@ -694,9 +694,11 @@
 /* PINT module features */
 
 /* @brief Number of connected outputs */
-#define FSL_FEATURE_PINT_NUMBER_OF_CONNECTED_OUTPUTS (8)
-/* @brief Number of connected outputs */
 #define FSL_FEATURE_SECPINT_NUMBER_OF_CONNECTED_OUTPUTS (2)
+/* @brief Number of instances */
+#define FSL_FEATURE_PINT_NUMBER_OF_INSTANCE (1)
+/* @brief Number of connected outputs */
+#define FSL_FEATURE_PINT_NUMBER_OF_CONNECTED_OUTPUTSn(x) (8)
 
 /* PMC module features */
 
