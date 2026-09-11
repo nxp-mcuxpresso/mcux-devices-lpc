@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
 **     Version:             rev. 1.0, 2017-12-15
-**     Build:               b260908
+**     Build:               b260911
 **
 **     Abstract:
 **         Chip specific module features.
@@ -210,8 +210,6 @@
 
 /* PINT module features */
 
-/* @brief Number of instances */
-#define FSL_FEATURE_PINT_NUMBER_OF_INSTANCE (1)
 /* @brief Number of connected outputs */
 #define FSL_FEATURE_PINT_NUMBER_OF_CONNECTED_OUTPUTSn(x) (4)
 
