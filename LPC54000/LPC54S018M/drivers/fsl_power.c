@@ -19,22 +19,18 @@
 #define BODYBIAS ((BODYBIAS_Type *)BODYBIAS_BASE)
 
 /* Normal Voltage level selection */
-#define POWER_NORMAL_VLEVEL(x) ((x & 0xfU) << 0U)
-#define POWER_NORMAL_FINE_VLEVEL(x) ((x & 0x3U) << 4U)
+#define POWER_NORMAL_VLEVEL(x) (((uint32_t)(x) & 0xfU) << 0U)
+#define POWER_NORMAL_FINE_VLEVEL(x) (((uint32_t)(x) & 0x3U) << 4U)
 
 /* Low Power Mode Voltage level selection */
-/* Normal Voltage level selection */
-#define POWER_NORMAL_VLEVEL(x) ((x & 0xfU) << 0U)
-#define POWER_NORMAL_FINE_VLEVEL(x) ((x & 0x3U) << 4U)
+#define POWER_LP_VD1_LEVEL(x) (((uint32_t)(x) & 0x1U) << 0U)
+#define POWER_LP_VD2_LEVEL(x) (((uint32_t)(x) & 0x1U) << 1U)
+#define POWER_LP_VD3_LEVEL(x) (((uint32_t)(x) & 0x1U) << 2U)
+#define POWER_LP_VD4_LEVEL(x) (((uint32_t)(x) & 0x1U) << 3U)
+#define POWER_LP_VD5_LEVEL(x) (((uint32_t)(x) & 0x1U) << 4U)
+#define POWER_LP_VD6_LEVEL(x) (((uint32_t)(x) & 0x1U) << 5U)
+#define POWER_LP_FINE_VLEVEL(x) (((uint32_t)(x) & 0x3U) << 8U)
 
-/* Low Power Mode Voltage level selection */
-#define POWER_LP_VD1_LEVEL(x) ((x & 0x1U) << 0U)
-#define POWER_LP_VD2_LEVEL(x) ((x & 0x1U) << 1U)
-#define POWER_LP_VD3_LEVEL(x) ((x & 0x1U) << 2U)
-#define POWER_LP_VD4_LEVEL(x) ((x & 0x1U) << 3U)
-#define POWER_LP_VD5_LEVEL(x) ((x & 0x1U) << 4U)
-#define POWER_LP_VD6_LEVEL(x) ((x & 0x1U) << 5U)
-#define POWER_LP_FINE_VLEVEL(x) ((x & 0x3U) << 8U)
 
 /* Clamp selection */
 #define POWER_CLAMP_LOW_ENABLE(x) ((x & 0x1U) << 0U)
@@ -328,8 +324,12 @@ typedef enum vbb_mode
 /* VDx voltage level selection */
 void POWER_setVdLevel(domain_t domain, voltageLevel_t level)
 {
-    POWER->VDCTRL[domain] = POWER_NORMAL_VLEVEL(level) | POWER_NORMAL_FINE_VLEVEL(0);
+    /* Guard the array index so it is provably within VDCTRL[] bounds (CERT ARR30-C). */
+    assert((uint32_t)domain < (sizeof(POWER->VDCTRL) / sizeof(POWER->VDCTRL[0])));
+
+    POWER->VDCTRL[(uint32_t)domain] = POWER_NORMAL_VLEVEL(level) | POWER_NORMAL_FINE_VLEVEL(0);
 }
+
 
 /* Low power mode VDx voltage level selection */
 void POWER_setLpVdLevel(lpVoltageLevel_t vd1LpLevel,
